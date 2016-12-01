@@ -98,7 +98,7 @@ Pod::Spec.new do |s|
 #  s.source_files  = "LogSwift", "LogSwift/**/*.{h,m}"
 #  s.exclude_files = "Classes/Exclude"
 
-   s.public_header_files = "LogSwift/**/*.h"
+#   s.public_header_files = "LogSwift/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
