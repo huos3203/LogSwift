@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		14E007051DF01A830056CBEF /* LogSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E006FB1DF01A820056CBEF /* LogSwift.framework */; };
-		14E0070A1DF01A830056CBEF /* LogSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007091DF01A830056CBEF /* LogSwiftTests.swift */; };
 		14E0070C1DF01A830056CBEF /* LogSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E006FE1DF01A830056CBEF /* LogSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14E007381DF01E940056CBEF /* PbbEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007311DF01E940056CBEF /* PbbEnum.swift */; };
 		14E007391DF01E940056CBEF /* PBBLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007321DF01E940056CBEF /* PBBLogModel.swift */; };
@@ -250,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14E0070A1DF01A830056CBEF /* LogSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +448,7 @@
 				14E007111DF01A830056CBEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14E007121DF01A830056CBEF /* Build configuration list for PBXNativeTarget "LogSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +457,7 @@
 				14E007141DF01A830056CBEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
