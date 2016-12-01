@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14E007051DF01A830056CBEF /* LogSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E006FB1DF01A820056CBEF /* LogSwift.framework */; };
+		14E0070A1DF01A830056CBEF /* LogSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007091DF01A830056CBEF /* LogSwiftTests.swift */; };
+		14E0070C1DF01A830056CBEF /* LogSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E006FE1DF01A830056CBEF /* LogSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14E007381DF01E940056CBEF /* PbbEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007311DF01E940056CBEF /* PbbEnum.swift */; };
+		14E007391DF01E940056CBEF /* PBBLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007321DF01E940056CBEF /* PBBLogModel.swift */; };
+		14E0073A1DF01E940056CBEF /* PBBLogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007331DF01E940056CBEF /* PBBLogAPI.swift */; };
+		14E0073B1DF01E940056CBEF /* PBBLogClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007341DF01E940056CBEF /* PBBLogClient.swift */; };
+		14E0073C1DF01E940056CBEF /* ConvertToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007361DF01E940056CBEF /* ConvertToDictionary.swift */; };
+		14E0073D1DF01E940056CBEF /* DeviceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007371DF01E940056CBEF /* DeviceUtil.swift */; };
+		14E0073F1DF01F2E0056CBEF /* LogSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 14E0073E1DF01F2E0056CBEF /* LogSwift.podspec */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14E007061DF01A830056CBEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E006F21DF01A820056CBEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14E006FA1DF01A820056CBEF;
+			remoteInfo = LogSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14E006FB1DF01A820056CBEF /* LogSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E006FE1DF01A830056CBEF /* LogSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogSwift.h; sourceTree = "<group>"; };
+		14E006FF1DF01A830056CBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14E007041DF01A830056CBEF /* LogSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E007091DF01A830056CBEF /* LogSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSwiftTests.swift; sourceTree = "<group>"; };
+		14E0070B1DF01A830056CBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14E007311DF01E940056CBEF /* PbbEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PbbEnum.swift; sourceTree = "<group>"; };
+		14E007321DF01E940056CBEF /* PBBLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBLogModel.swift; sourceTree = "<group>"; };
+		14E007331DF01E940056CBEF /* PBBLogAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBLogAPI.swift; sourceTree = "<group>"; };
+		14E007341DF01E940056CBEF /* PBBLogClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBLogClient.swift; sourceTree = "<group>"; };
+		14E007361DF01E940056CBEF /* ConvertToDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertToDictionary.swift; sourceTree = "<group>"; };
+		14E007371DF01E940056CBEF /* DeviceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceUtil.swift; sourceTree = "<group>"; };
+		14E0073E1DF01F2E0056CBEF /* LogSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = LogSwift.podspec; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14E006F71DF01A820056CBEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E007011DF01A830056CBEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E007051DF01A830056CBEF /* LogSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14E006F11DF01A820056CBEF = {
+			isa = PBXGroup;
+			children = (
+				14E006FD1DF01A830056CBEF /* LogSwift */,
+				14E007081DF01A830056CBEF /* LogSwiftTests */,
+				14E006FC1DF01A820056CBEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14E006FC1DF01A820056CBEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E006FB1DF01A820056CBEF /* LogSwift.framework */,
+				14E007041DF01A830056CBEF /* LogSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E006FD1DF01A830056CBEF /* LogSwift */ = {
+			isa = PBXGroup;
+			children = (
+				14E0073E1DF01F2E0056CBEF /* LogSwift.podspec */,
+				14E007301DF01E940056CBEF /* model */,
+				14E007331DF01E940056CBEF /* PBBLogAPI.swift */,
+				14E007341DF01E940056CBEF /* PBBLogClient.swift */,
+				14E007351DF01E940056CBEF /* util */,
+				14E006FE1DF01A830056CBEF /* LogSwift.h */,
+				14E006FF1DF01A830056CBEF /* Info.plist */,
+			);
+			path = LogSwift;
+			sourceTree = "<group>";
+		};
+		14E007081DF01A830056CBEF /* LogSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				14E007091DF01A830056CBEF /* LogSwiftTests.swift */,
+				14E0070B1DF01A830056CBEF /* Info.plist */,
+			);
+			path = LogSwiftTests;
+			sourceTree = "<group>";
+		};
+		14E007301DF01E940056CBEF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				14E007311DF01E940056CBEF /* PbbEnum.swift */,
+				14E007321DF01E940056CBEF /* PBBLogModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		14E007351DF01E940056CBEF /* util */ = {
+			isa = PBXGroup;
+			children = (
+				14E007361DF01E940056CBEF /* ConvertToDictionary.swift */,
+				14E007371DF01E940056CBEF /* DeviceUtil.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		14E006F81DF01A820056CBEF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E0070C1DF01A830056CBEF /* LogSwift.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		14E006FA1DF01A820056CBEF /* LogSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E0070F1DF01A830056CBEF /* Build configuration list for PBXNativeTarget "LogSwift" */;
+			buildPhases = (
+				14E006F61DF01A820056CBEF /* Sources */,
+				14E006F71DF01A820056CBEF /* Frameworks */,
+				14E006F81DF01A820056CBEF /* Headers */,
+				14E006F91DF01A820056CBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogSwift;
+			productName = LogSwift;
+			productReference = 14E006FB1DF01A820056CBEF /* LogSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		14E007031DF01A830056CBEF /* LogSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E007121DF01A830056CBEF /* Build configuration list for PBXNativeTarget "LogSwiftTests" */;
+			buildPhases = (
+				14E007001DF01A830056CBEF /* Sources */,
+				14E007011DF01A830056CBEF /* Frameworks */,
+				14E007021DF01A830056CBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14E007071DF01A830056CBEF /* PBXTargetDependency */,
+			);
+			name = LogSwiftTests;
+			productName = LogSwiftTests;
+			productReference = 14E007041DF01A830056CBEF /* LogSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14E006F21DF01A820056CBEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = PBBReader;
+				TargetAttributes = {
+					14E006FA1DF01A820056CBEF = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FA78T6VRG8;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					14E007031DF01A830056CBEF = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FA78T6VRG8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 14E006F51DF01A820056CBEF /* Build configuration list for PBXProject "LogSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 14E006F11DF01A820056CBEF;
+			productRefGroup = 14E006FC1DF01A820056CBEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14E006FA1DF01A820056CBEF /* LogSwift */,
+				14E007031DF01A830056CBEF /* LogSwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14E006F91DF01A820056CBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E0073F1DF01F2E0056CBEF /* LogSwift.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E007021DF01A830056CBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14E006F61DF01A820056CBEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E007381DF01E940056CBEF /* PbbEnum.swift in Sources */,
+				14E007391DF01E940056CBEF /* PBBLogModel.swift in Sources */,
+				14E0073C1DF01E940056CBEF /* ConvertToDictionary.swift in Sources */,
+				14E0073B1DF01E940056CBEF /* PBBLogClient.swift in Sources */,
+				14E0073A1DF01E940056CBEF /* PBBLogAPI.swift in Sources */,
+				14E0073D1DF01E940056CBEF /* DeviceUtil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E007001DF01A830056CBEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E0070A1DF01A830056CBEF /* LogSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14E007071DF01A830056CBEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14E006FA1DF01A820056CBEF /* LogSwift */;
+			targetProxy = 14E007061DF01A830056CBEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14E0070D1DF01A830056CBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		14E0070E1DF01A830056CBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		14E007101DF01A830056CBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LogSwift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LogSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		14E007111DF01A830056CBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LogSwift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LogSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		14E007131DF01A830056CBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				INFOPLIST_FILE = LogSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LogSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		14E007141DF01A830056CBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				INFOPLIST_FILE = LogSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LogSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14E006F51DF01A820056CBEF /* Build configuration list for PBXProject "LogSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E0070D1DF01A830056CBEF /* Debug */,
+				14E0070E1DF01A830056CBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14E0070F1DF01A830056CBEF /* Build configuration list for PBXNativeTarget "LogSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E007101DF01A830056CBEF /* Debug */,
+				14E007111DF01A830056CBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14E007121DF01A830056CBEF /* Build configuration list for PBXNativeTarget "LogSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E007131DF01A830056CBEF /* Debug */,
+				14E007141DF01A830056CBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14E006F21DF01A820056CBEF /* Project object */;
+}
