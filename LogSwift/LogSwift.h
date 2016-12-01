@@ -15,7 +15,7 @@ FOUNDATION_EXPORT double PBBLogSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char PBBLogSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PBBLogSDK/PublicHeader.h>
-#import "PBBLogSDKForiOS-Swift.h"
+#import "LogSwift-Swift.h"
 
 #elif TARGET_OS_MAC
 #import <Cocoa/Cocoa.h>
@@ -28,7 +28,7 @@ FOUNDATION_EXPORT double PBBLogSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char PBBLogSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PBBLogSDK/PublicHeader.h>
-#import <PBBLogSDK/PBBLogSDK-Swift.h>
+//#import <PBBLogSDK/PBBLogSDK-Swift.h>
 
 #endif
 
