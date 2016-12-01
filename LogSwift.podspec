@@ -73,7 +73,7 @@ Pod::Spec.new do |s|
 
   #  When using multiple platforms
    s.ios.deployment_target = "10.0"
-   s.osx.deployment_target = "10.12"
+#   s.osx.deployment_target = "10.12"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
@@ -95,10 +95,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "LogSwift", "LogSwift/**/*.{h,m}"
+  s.source_files  = "LogSwift/**/*"
 #  s.exclude_files = "Classes/Exclude"
 
-#   s.public_header_files = "LogSwift/**/*.h"
+   s.public_header_files = "LogSwift/**/*"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
