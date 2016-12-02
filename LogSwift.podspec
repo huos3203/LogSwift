@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LogSwift"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "A looging library written in swift."
 
   # This description is used to generate tags and improve search results.
@@ -84,7 +84,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/huos3203/LogSwift.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://server.local/git/logSwift.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
