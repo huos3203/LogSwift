@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LogSwift"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "A looging library written in swift."
 
   # This description is used to generate tags and improve search results.
@@ -95,7 +95,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "LogSwift/**/*.{h}"
+  s.source_files  = "LogSwift/**/*.{swift,h}"
 #  s.exclude_files = "Classes/Exclude"
 
    s.public_header_files = "LogSwift/LogSwift.h"
