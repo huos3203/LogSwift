@@ -95,10 +95,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "LogSwift/**/*"
+  s.source_files  = "LogSwift/**/*.{h}"
 #  s.exclude_files = "Classes/Exclude"
 
-   s.public_header_files = "LogSwift/**/*"
+   s.public_header_files = "LogSwift/LogSwift.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
