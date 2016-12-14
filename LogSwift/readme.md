@@ -1,10 +1,19 @@
-创建私库
+[创建私库](http://blog.wtlucky.com/blog/2015/02/26/create-private-podspec/)
 1.在server提供的git工具中，新建MySpecs库。
     例如：https://server.local/git/MyRepo.git
-2. 直接将私库添加到pod仓库,执行后会在~/.cocoapods/多处一个目录MySpecs
-   pod repo add MyRepo https://server.local/git/MyRepo.git
-3. 把自己的索引文件添加到私库,自动生成标准的pod 库结构，并上传到MySpecs.git库中
-   pod repo push MyRepo logSwift.podspec
+2. 直接将私库添加到pod仓库
+    $ pod repo add MyRepo https://server.local/git/MyRepo.git
+   执行后会在~/.cocoapods/多处一个目录MySpecs
+
+3. 创建podspec文件
+    $ pod spec create logSwift https://server.local/git/logSwift.git
+ 
+ 检验索引文件的配置是否正确：
+    $ pod spec lint
+ 
+3. 向私库提交podspec文件
+    $ pod repo push MyRepo logSwift.podspec
+   会先在本地~/.cocoapods/自动生成标准的pod 库结构，让后并上传到MySpecs.git库中
 
 4. 在项目中使用私库索引
   在项目的Podfile文件中添加：
@@ -20,8 +29,7 @@ pod 'logSwift', :git => 'https://server.local/git/logSwift.git'
 第二种：指定本地库索引文件
 pod "LogSwift" , :podspec => '/Users/.../LogSwift/LogSwift.podspec'
 
-检验索引文件的配置是否正确：
-pod spec lint
+
 
 搜索库
 pod search LogSwift #会搜索私库MyRepo
