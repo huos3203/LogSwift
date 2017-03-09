@@ -32,7 +32,7 @@ pod "LogSwift" , :podspec => '/Users/.../LogSwift/LogSwift.podspec'
 
 
 搜索库
-pod search LogSwift #会搜索私库MyRepo
+pod search LogSwift #会搜索私库MyRepo 
 
 
 //删除私库
