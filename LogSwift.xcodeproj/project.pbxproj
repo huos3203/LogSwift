@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08165EEF7F3C7BED1A7EDE30 /* Pods_LogSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864D2B0D54C1D9858BF1E4F1 /* Pods_LogSwiftTests.framework */; };
+		1483B7EE1E825A5A009D8C42 /* PBBLogSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7ED1E825A5A009D8C42 /* PBBLogSDKTests.swift */; };
 		14E007051DF01A830056CBEF /* LogSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E006FB1DF01A820056CBEF /* LogSwift.framework */; };
 		14E0070C1DF01A830056CBEF /* LogSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E006FE1DF01A830056CBEF /* LogSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14E007381DF01E940056CBEF /* PbbEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007311DF01E940056CBEF /* PbbEnum.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1483B7ED1E825A5A009D8C42 /* PBBLogSDKTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBLogSDKTests.swift; sourceTree = "<group>"; };
 		14E006FB1DF01A820056CBEF /* LogSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E006FE1DF01A830056CBEF /* LogSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogSwift.h; sourceTree = "<group>"; };
 		14E006FF1DF01A830056CBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				14E007091DF01A830056CBEF /* LogSwiftTests.swift */,
+				1483B7ED1E825A5A009D8C42 /* PBBLogSDKTests.swift */,
 				14E0070B1DF01A830056CBEF /* Info.plist */,
 			);
 			path = LogSwiftTests;
@@ -476,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1483B7EE1E825A5A009D8C42 /* PBBLogSDKTests.swift in Sources */,
 				844A66F11DF0731700E4E123 /* LogSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
