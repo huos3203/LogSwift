@@ -16,23 +16,19 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LogSwift"
-  s.version      = "0.0.8"
+  s.version      = "1.0"
   s.summary      = "A looging library written in swift."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between t he DESC delimiters below.
+  #   * Write the description between t yhe DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                  Log4swift is a logging library similar in philosophy to log4j.
-                  It is meant to be :
-                  * very simple to use for simple cases
-                  * extensively configurable for less simple cases
-                  * taking advantage of the swift 2 language
+                    收集APP运行信息，（bug，error，info）等，级别日志的收集。
                    DESC
 
-  s.homepage     = "http://www.pyc.com.cn"
+  s.homepage     = "http://boyers.coding.me"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -43,8 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = { :type => "Apache v2.0", :file => "LICENSE" }
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -57,7 +52,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "" => "" }
+  s.author             = { "布衣男儿" => "724987481@qq.com" }
   # Or just: s.author    = ""
   # s.authors            = { "" => "" }
   # s.social_media_url   = "http://twitter.com/"
@@ -72,7 +67,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-   s.ios.deployment_target = "10.0"
+   s.ios.deployment_target = "9.0"
    s.osx.deployment_target = "10.12"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -84,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://server.local/git/logSwift.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/huos3203/LogSwift.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
