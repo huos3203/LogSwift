@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import LogSwift
+@testable import LogSwiftForOSX
 
 class PBBLogSDKTests: XCTestCase {
     

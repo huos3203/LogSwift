@@ -193,7 +193,7 @@ public class PBBLogModel: NSObject
     }
 
     ///aes加密
-    func aesEncryptPassword(password:String,secret:String)->String
+    public func aesEncryptPassword(password:String,secret:String)->String
     {
         let data = "sdfhskhfsj".data(using: String.Encoding.utf8)!
         let ciphertext = RNCryptor.encrypt(data: data, withPassword: secret)
@@ -202,8 +202,11 @@ public class PBBLogModel: NSObject
 
     }
     
-    //aes解密
-    func aesDecryptor(password:String,secret:String)->String
+    /**
+     
+      - aes解密
+     */
+    public func aesDecryptor(password:String,secret:String)->String
     {
         
         var plaintext: Data = Data.init(base64Encoded: password,

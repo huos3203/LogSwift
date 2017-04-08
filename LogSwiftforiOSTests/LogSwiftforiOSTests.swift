@@ -1,15 +1,14 @@
 //
-//  LogSwiftTests.swift
-//  LogSwiftTests
+//  LogSwiftforiOSTests.swift
+//  LogSwiftforiOSTests
 //
-//  Created by pengyucheng on 01/12/2016.
-//  Copyright © 2016 PBBReader. All rights reserved.
+//  Created by huoshuguang on 2017/4/8.
+//  Copyright © 2017年 PBBReader. All rights reserved.
 //
 
 import XCTest
-@testable import LogSwiftForOSX
-
-class LogSwiftTests: XCTestCase {
+@testable import LogSwift
+class LogSwiftforiOSTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -24,7 +23,8 @@ class LogSwiftTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        PBBLogModel.init(type: .FATAL, APPNam: .PBBMaker, description: "").sendTo()
+        let des = PBBLogModel.init(type: .DEBUG, APPNam: .PBBMaker, description: "test").description
+        print(des)
     }
     
     func testPerformanceExample() {

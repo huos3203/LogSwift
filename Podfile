@@ -8,8 +8,8 @@ target 'LogSwift' do
   project 'LogSwift.xcodeproj'
 
   # Pods for LogSwift
- pod "RNCryptor", "~> 5.0.1"
-  target 'LogSwiftTests' do
+  pod "RNCryptor", "~> 5.0.1"
+  target 'LogSwiftforiOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

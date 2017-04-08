@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import PBBLogSDK
+@testable import LogSwiftForOSX
 
 class DeviceInfoTest: XCTestCase {
 
