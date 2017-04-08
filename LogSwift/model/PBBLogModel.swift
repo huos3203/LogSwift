@@ -195,7 +195,7 @@ public class PBBLogModel: NSObject
     ///aes加密
     public func aesEncryptPassword(password:String,secret:String)->String
     {
-        let data = "sdfhskhfsj".data(using: String.Encoding.utf8)!
+        let data = password.data(using: String.Encoding.utf8)!
         let ciphertext = RNCryptor.encrypt(data: data, withPassword: secret)
 //        let ciphertext2 = RNCryptor.Encryptor(password: secret).encrypt(data: data)
         return ciphertext.base64EncodedString()

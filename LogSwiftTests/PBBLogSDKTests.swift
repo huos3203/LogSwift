@@ -48,7 +48,7 @@ class PBBLogSDKTests: XCTestCase {
         //
         let logmodel = PBBLogModel.init(.INFO, in: .ReaderMac, desc: "dddd")
         NSLog(logmodel.description)
-        logmodel.sendTo(server: "http://localhost:8181/HostMonitor/client/log/addLog")
+        //logmodel.sendTo(server: "http://localhost:8181/HostMonitor/client/log/addLog")
     }
 
     func testRequest()

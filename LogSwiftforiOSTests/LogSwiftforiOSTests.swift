@@ -23,8 +23,12 @@ class LogSwiftforiOSTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let des = PBBLogModel.init(type: .DEBUG, APPNam: .PBBMaker, description: "test").description
-        print(des)
+        let model = PBBLogModel.init(type: .DEBUG, APPNam: .PBBMaker, description: "test")//.description
+        print(model.description)
+        let eee = model.aesEncryptPassword(password: "dddd", secret: "dddd")
+        print(eee)
+        let ddd = model.aesDecryptor(password: eee, secret: "dddd")
+        print(ddd)
     }
     
     func testPerformanceExample() {
