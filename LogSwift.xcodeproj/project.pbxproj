@@ -17,7 +17,6 @@
 		14E0073C1DF01E940056CBEF /* ConvertToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007361DF01E940056CBEF /* ConvertToDictionary.swift */; };
 		14E0073D1DF01E940056CBEF /* DeviceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007371DF01E940056CBEF /* DeviceUtil.swift */; };
 		14E0073F1DF01F2E0056CBEF /* LogSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 14E0073E1DF01F2E0056CBEF /* LogSwift.podspec */; };
-		668146441F4EF5095ABDDF2A /* Pods_LogSwiftforiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981EC69B789B42CC474BE433 /* Pods_LogSwiftforiOSTests.framework */; };
 		7077374362CF2DC9A8EECC70 /* Pods_LogSwiftForOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B4B6402BB560BFBC8DE03F /* Pods_LogSwiftForOSX.framework */; };
 		844A66F01DF06F7E00E4E123 /* InfoForiOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14E006FF1DF01A830056CBEF /* InfoForiOS.plist */; };
 		844A66F11DF0731700E4E123 /* LogSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E007091DF01A830056CBEF /* LogSwiftTests.swift */; };
@@ -34,11 +33,10 @@
 		844A67071DF07B6700E4E123 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14E0070B1DF01A830056CBEF /* Info.plist */; };
 		84C664891E98E2A400A56CB0 /* LogSwiftforiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C664881E98E2A400A56CB0 /* LogSwiftforiOSTests.swift */; };
 		84C6648B1E98E2A400A56CB0 /* LogSwiftForiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E006FB1DF01A820056CBEF /* LogSwiftForiOS.framework */; };
+		84D649141E99BFC300B4D0EA /* Pods_LogSwiftForiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D649131E99BFC300B4D0EA /* Pods_LogSwiftForiOS.framework */; };
+		84D649171E99D02500B4D0EA /* LogSwiftForOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844A670C1DF07B6700E4E123 /* LogSwiftForOSX.framework */; };
 		84EDDB881E99261E00EB5564 /* IOUSBDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDB871E99261D00EB5564 /* IOUSBDetector.swift */; };
 		84EDDB8A1E9926AD00EB5564 /* DeviceXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDB891E9926AD00EB5564 /* DeviceXMLParser.swift */; };
-		84EDDB8B1E99292C00EB5564 /* LogSwiftForOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844A670C1DF07B6700E4E123 /* LogSwiftForOSX.framework */; };
-		A140D694FB091ACBA89B3A10 /* Pods_LogSwiftForOSXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CFB1B70BB6331F03A783AE /* Pods_LogSwiftForOSXTests.framework */; };
-		A488854487DD7313A2FB0602 /* Pods_LogSwiftForiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612CE31D207842B552C88009 /* Pods_LogSwiftForiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +75,6 @@
 		14E007371DF01E940056CBEF /* DeviceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceUtil.swift; sourceTree = "<group>"; };
 		14E0073E1DF01F2E0056CBEF /* LogSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = LogSwift.podspec; sourceTree = SOURCE_ROOT; };
 		14E007431DF12FBF0056CBEF /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		22DCB2C65E02DA337AE51967 /* Pods-LogSwiftForOSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests.release.xcconfig"; sourceTree = "<group>"; };
-		612CE31D207842B552C88009 /* Pods_LogSwiftForiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogSwiftForiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7923084CE42E91CF25275DB0 /* Pods-LogSwiftForOSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSX/Pods-LogSwiftForOSX.release.xcconfig"; sourceTree = "<group>"; };
 		81B4B6402BB560BFBC8DE03F /* Pods_LogSwiftForOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogSwiftForOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844A670C1DF07B6700E4E123 /* LogSwiftForOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogSwiftForOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,18 +82,21 @@
 		84C664861E98E2A400A56CB0 /* LogSwiftforiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogSwiftforiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C664881E98E2A400A56CB0 /* LogSwiftforiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSwiftforiOSTests.swift; sourceTree = "<group>"; };
 		84C6648A1E98E2A400A56CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D649131E99BFC300B4D0EA /* Pods_LogSwiftForiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_LogSwiftForiOS.framework; path = "../Library/Developer/Xcode/DerivedData/LogSwift-chzttrskziqczxdrdcgixxwufimu/Build/Products/Debug-iphonesimulator/Pods_LogSwiftForiOS.framework"; sourceTree = "<group>"; };
 		84EDDB871E99261D00EB5564 /* IOUSBDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOUSBDetector.swift; sourceTree = "<group>"; };
 		84EDDB891E9926AD00EB5564 /* DeviceXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceXMLParser.swift; sourceTree = "<group>"; };
 		870A2799C82F5FB3729913B6 /* Pods-LogSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwift/Pods-LogSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		894D8CD1D32EB4C504923D71 /* Pods-LogSwiftForiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForiOS/Pods-LogSwiftForiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8ACBFDE0A6B841F646D0654F /* Pods-LogSwiftForOSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests.release.xcconfig"; sourceTree = "<group>"; };
 		8ED16CBDB09E0087535FEE0E /* Pods-LogSwiftForOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSX/Pods-LogSwiftForOSX.debug.xcconfig"; sourceTree = "<group>"; };
 		9128A7A3F54E69BAECB2AD77 /* Pods-LogSwiftforiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftforiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftforiOSTests/Pods-LogSwiftforiOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		981EC69B789B42CC474BE433 /* Pods_LogSwiftforiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogSwiftforiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98CFB1B70BB6331F03A783AE /* Pods_LogSwiftForOSXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogSwiftForOSXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A295DCB33E99A151AB2E2E28 /* Pods-LogSwiftForOSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABC51A0AAF73C7A3AE5B3CED /* Pods-LogSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwift/Pods-LogSwift.release.xcconfig"; sourceTree = "<group>"; };
+		D3D5F3C9E47657F1F6734EF3 /* Pods-LogSwiftForOSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D532EBCCF552123618523427 /* Pods_LogSwiftForiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogSwiftForiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16FB8EC3E7D97FF5611B732 /* Pods-LogSwiftforiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftforiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftforiOSTests/Pods-LogSwiftforiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E2B49D6E833BE559CC8967B0 /* Pods-LogSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwift/Pods-LogSwift.release.xcconfig"; sourceTree = "<group>"; };
+		EFF922077A72C49663E3D6EC /* Pods_LogSwiftforiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogSwiftforiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1DF5E230FB17777BB2E29C8 /* Pods-LogSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwift/Pods-LogSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		F593D7D5E0FBEE718CE3E040 /* Pods-LogSwiftForOSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSX/Pods-LogSwiftForOSX.release.xcconfig"; sourceTree = "<group>"; };
 		F6D798FC69AE81832E904BAB /* Pods-LogSwiftForOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSX/Pods-LogSwiftForOSX.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A488854487DD7313A2FB0602 /* Pods_LogSwiftForiOS.framework in Frameworks */,
+				84D649141E99BFC300B4D0EA /* Pods_LogSwiftForiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84EDDB8B1E99292C00EB5564 /* LogSwiftForOSX.framework in Frameworks */,
-				A140D694FB091ACBA89B3A10 /* Pods_LogSwiftForOSXTests.framework in Frameworks */,
+				84D649171E99D02500B4D0EA /* LogSwiftForOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84C6648B1E98E2A400A56CB0 /* LogSwiftForiOS.framework in Frameworks */,
-				668146441F4EF5095ABDDF2A /* Pods_LogSwiftforiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,10 +226,11 @@
 		1E3B1FBE8DDDC7FF2F2BE997 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84D649131E99BFC300B4D0EA /* Pods_LogSwiftForiOS.framework */,
 				81B4B6402BB560BFBC8DE03F /* Pods_LogSwiftForOSX.framework */,
 				98CFB1B70BB6331F03A783AE /* Pods_LogSwiftForOSXTests.framework */,
-				612CE31D207842B552C88009 /* Pods_LogSwiftForiOS.framework */,
-				981EC69B789B42CC474BE433 /* Pods_LogSwiftforiOSTests.framework */,
+				D532EBCCF552123618523427 /* Pods_LogSwiftForiOS.framework */,
+				EFF922077A72C49663E3D6EC /* Pods_LogSwiftforiOSTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,10 +253,10 @@
 				F593D7D5E0FBEE718CE3E040 /* Pods-LogSwiftForOSX.release.xcconfig */,
 				E16FB8EC3E7D97FF5611B732 /* Pods-LogSwiftforiOSTests.debug.xcconfig */,
 				9128A7A3F54E69BAECB2AD77 /* Pods-LogSwiftforiOSTests.release.xcconfig */,
-				A295DCB33E99A151AB2E2E28 /* Pods-LogSwiftForOSXTests.debug.xcconfig */,
-				22DCB2C65E02DA337AE51967 /* Pods-LogSwiftForOSXTests.release.xcconfig */,
 				894D8CD1D32EB4C504923D71 /* Pods-LogSwiftForiOS.debug.xcconfig */,
 				0A9A87C71220BE3CDA033696 /* Pods-LogSwiftForiOS.release.xcconfig */,
+				D3D5F3C9E47657F1F6734EF3 /* Pods-LogSwiftForOSXTests.debug.xcconfig */,
+				8ACBFDE0A6B841F646D0654F /* Pods-LogSwiftForOSXTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -309,12 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14E007121DF01A830056CBEF /* Build configuration list for PBXNativeTarget "LogSwiftForOSXTests" */;
 			buildPhases = (
-				99282478AE51C9ECAE44BE69 /* [CP] Check Pods Manifest.lock */,
+				4AEBCC0EE96AEF9389F16971 /* [CP] Check Pods Manifest.lock */,
 				14E007001DF01A830056CBEF /* Sources */,
 				14E007011DF01A830056CBEF /* Frameworks */,
 				14E007021DF01A830056CBEF /* Resources */,
-				79655860ED41609496547983 /* [CP] Embed Pods Frameworks */,
-				53C60960A501C4527E0D55B9 /* [CP] Copy Pods Resources */,
+				6302829AAE8D429F66141D59 /* [CP] Embed Pods Frameworks */,
+				CDB1ABBF7F9B76AC9E481B99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -470,19 +468,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogSwiftforiOSTests/Pods-LogSwiftforiOSTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		53C60960A501C4527E0D55B9 /* [CP] Copy Pods Resources */ = {
+		4AEBCC0EE96AEF9389F16971 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		59677BA83F88963E5F6621FC /* [CP] Check Pods Manifest.lock */ = {
@@ -515,7 +513,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogSwiftForOSX/Pods-LogSwiftForOSX-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		79655860ED41609496547983 /* [CP] Embed Pods Frameworks */ = {
+		6302829AAE8D429F66141D59 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -560,19 +558,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		99282478AE51C9ECAE44BE69 /* [CP] Check Pods Manifest.lock */ = {
+		CDB1ABBF7F9B76AC9E481B99 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE0BCECE9FA2BED84A223DB2 /* [CP] Check Pods Manifest.lock */ = {
@@ -820,12 +818,15 @@
 		};
 		14E007131DF01A830056CBEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A295DCB33E99A151AB2E2E28 /* Pods-LogSwiftForOSXTests.debug.xcconfig */;
+			baseConfigurationReference = D3D5F3C9E47657F1F6734EF3 /* Pods-LogSwiftForOSXTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
+				DYLIB_INSTALL_NAME_BASE = "";
 				INFOPLIST_FILE = LogSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LogSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -834,12 +835,15 @@
 		};
 		14E007141DF01A830056CBEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22DCB2C65E02DA337AE51967 /* Pods-LogSwiftForOSXTests.release.xcconfig */;
+			baseConfigurationReference = 8ACBFDE0A6B841F646D0654F /* Pods-LogSwiftForOSXTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
+				DYLIB_INSTALL_NAME_BASE = "";
 				INFOPLIST_FILE = LogSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LogSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -860,7 +864,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = InfoForOSX.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LogSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -884,7 +888,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = InfoForOSX.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LogSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -901,7 +905,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				INFOPLIST_FILE = LogSwiftforiOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Layer.Animations.LogSwiftforiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -917,7 +921,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				INFOPLIST_FILE = LogSwiftforiOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Layer.Animations.LogSwiftforiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
