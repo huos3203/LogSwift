@@ -5,7 +5,7 @@
 //  Created by huoshuguang on 2016/11/26.
 //  Copyright © 2016年 recomend. All rights reserved.
 //
-
+#if os(OSX)
 import Cocoa
 import Darwin
 import IOKit
@@ -147,3 +147,4 @@ class IOUSBDetector {
         self.terminatedIterator = 0
     }
 }
+#endif

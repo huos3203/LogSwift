@@ -6,8 +6,8 @@
 //  Copyright © 2016 recomend. All rights reserved.
 //
 
+#if os(OSX)
 import Cocoa
-
 extension NSTextField
 {
     
@@ -193,3 +193,6 @@ extension NSTextField
         }
     }
 }
+#elseif os(iOS)
+    import UIKit
+#endif

@@ -302,8 +302,8 @@ class DeviceUtil: NSObject
              */
             while io_object_t() == IOIteratorNext(iterator) {
                 
-                let serialport = IORegistryEntryCreateCFProperty(io_object_t(), kIOCalloutDeviceKey as CFString!, kCFAllocatorDefault, 0)
-                NSLog("serialport----:\(serialport)")
+                //let serialport = IORegistryEntryCreateCFProperty(io_object_t(), kIOCalloutDeviceKey as CFString!, kCFAllocatorDefault, 0)
+                //NSLog("serialport----:\(serialport)")
                 var usbProperties:Unmanaged<CFMutableDictionary>?
                 //
                 kr = IORegistryEntryCreateCFProperties(io_object_t(), &usbProperties, kCFAllocatorDefault, 0)

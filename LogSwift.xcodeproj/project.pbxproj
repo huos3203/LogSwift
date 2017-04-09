@@ -35,6 +35,7 @@
 		84C6648B1E98E2A400A56CB0 /* LogSwiftForiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E006FB1DF01A820056CBEF /* LogSwiftForiOS.framework */; };
 		84D649141E99BFC300B4D0EA /* Pods_LogSwiftForiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D649131E99BFC300B4D0EA /* Pods_LogSwiftForiOS.framework */; };
 		84D649171E99D02500B4D0EA /* LogSwiftForOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844A670C1DF07B6700E4E123 /* LogSwiftForOSX.framework */; };
+		84D649381E9A1F0900B4D0EA /* Label+WaterMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D649371E9A1F0900B4D0EA /* Label+WaterMark.swift */; };
 		84EDDB881E99261E00EB5564 /* IOUSBDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDB871E99261D00EB5564 /* IOUSBDetector.swift */; };
 		84EDDB8A1E9926AD00EB5564 /* DeviceXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDB891E9926AD00EB5564 /* DeviceXMLParser.swift */; };
 /* End PBXBuildFile section */
@@ -59,10 +60,9 @@
 /* Begin PBXFileReference section */
 		0A9A87C71220BE3CDA033696 /* Pods-LogSwiftForiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForiOS/Pods-LogSwiftForiOS.release.xcconfig"; sourceTree = "<group>"; };
 		144B8E1D1E978F9B009969E8 /* DeviceInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoTest.swift; sourceTree = "<group>"; };
-		144B8E1F1E978FE9009969E8 /* Label+WaterMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+WaterMark.swift"; sourceTree = "<group>"; };
 		1483B7ED1E825A5A009D8C42 /* PBBLogSDKTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBLogSDKTests.swift; sourceTree = "<group>"; };
 		14E006FB1DF01A820056CBEF /* LogSwiftForiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogSwiftForiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		14E006FE1DF01A830056CBEF /* LogSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogSwift.h; sourceTree = "<group>"; };
+		14E006FE1DF01A830056CBEF /* LogSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogSwift.h; path = ../LogSwift/LogSwift.h; sourceTree = "<group>"; };
 		14E006FF1DF01A830056CBEF /* InfoForiOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoForiOS.plist; sourceTree = "<group>"; };
 		14E007041DF01A830056CBEF /* LogSwiftForOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogSwiftForOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E007091DF01A830056CBEF /* LogSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSwiftTests.swift; sourceTree = "<group>"; };
@@ -83,6 +83,7 @@
 		84C664881E98E2A400A56CB0 /* LogSwiftforiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSwiftforiOSTests.swift; sourceTree = "<group>"; };
 		84C6648A1E98E2A400A56CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D649131E99BFC300B4D0EA /* Pods_LogSwiftForiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_LogSwiftForiOS.framework; path = "../Library/Developer/Xcode/DerivedData/LogSwift-chzttrskziqczxdrdcgixxwufimu/Build/Products/Debug-iphonesimulator/Pods_LogSwiftForiOS.framework"; sourceTree = "<group>"; };
+		84D649371E9A1F0900B4D0EA /* Label+WaterMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+WaterMark.swift"; sourceTree = "<group>"; };
 		84EDDB871E99261D00EB5564 /* IOUSBDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOUSBDetector.swift; sourceTree = "<group>"; };
 		84EDDB891E9926AD00EB5564 /* DeviceXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceXMLParser.swift; sourceTree = "<group>"; };
 		870A2799C82F5FB3729913B6 /* Pods-LogSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwift/Pods-LogSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,11 +181,11 @@
 				14E007431DF12FBF0056CBEF /* readme.md */,
 				14E007301DF01E940056CBEF /* model */,
 				14E007331DF01E940056CBEF /* PBBLogAPI.swift */,
+				84D649371E9A1F0900B4D0EA /* Label+WaterMark.swift */,
 				14E007341DF01E940056CBEF /* PBBLogClient.swift */,
 				14E007351DF01E940056CBEF /* util */,
 				844A670D1DF07B6800E4E123 /* InfoForOSX.plist */,
 				14E006FF1DF01A830056CBEF /* InfoForiOS.plist */,
-				14E006FE1DF01A830056CBEF /* LogSwift.h */,
 				09D06E7D45823D9CDB1216B1 /* Pods */,
 			);
 			path = LogSwift;
@@ -193,6 +194,7 @@
 		14E007081DF01A830056CBEF /* LogSwiftForOSXTests */ = {
 			isa = PBXGroup;
 			children = (
+				14E006FE1DF01A830056CBEF /* LogSwift.h */,
 				14E007091DF01A830056CBEF /* LogSwiftTests.swift */,
 				144B8E1D1E978F9B009969E8 /* DeviceInfoTest.swift */,
 				1483B7ED1E825A5A009D8C42 /* PBBLogSDKTests.swift */,
@@ -218,7 +220,6 @@
 				84EDDB871E99261D00EB5564 /* IOUSBDetector.swift */,
 				14E007371DF01E940056CBEF /* DeviceUtil.swift */,
 				84EDDB891E9926AD00EB5564 /* DeviceXMLParser.swift */,
-				144B8E1F1E978FE9009969E8 /* Label+WaterMark.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -610,6 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D649381E9A1F0900B4D0EA /* Label+WaterMark.swift in Sources */,
 				14E007381DF01E940056CBEF /* PbbEnum.swift in Sources */,
 				14E007391DF01E940056CBEF /* PBBLogModel.swift in Sources */,
 				14E0073C1DF01E940056CBEF /* ConvertToDictionary.swift in Sources */,

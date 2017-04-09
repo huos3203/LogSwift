@@ -25,14 +25,14 @@ class PBBLogClient
         request.httpMethod = "POST"
         let dataTask: URLSessionDataTask = URLSession.shared.dataTask(with: request) {
             (data, resp, err) in
-            print("响应的服务器地址：\(resp?.url?.absoluteString)")
+            print("响应的服务器地址：\(String(describing: resp?.url?.absoluteString))")
             var dict:NSDictionary? = nil
             do {
                 dict  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 0)) as? NSDictionary
             } catch {
                 
             }
-            print("\(dict)")
+            print("\(String(describing: dict))")
         }
         dataTask.resume()
     }
@@ -68,7 +68,7 @@ class PBBLogClient
                                                             {
                                                                 let dataFormatToString = String(data: receiveData,
                                                                                                 encoding: String.Encoding.utf8)
-                                                                NSLog("上传成功。\(dataFormatToString)。。\(error)")
+                                                                NSLog("上传成功。\(String(describing: dataFormatToString))。。\(String(describing: error))")
                                                                 if JSONSerialization.isValidJSONObject(receiveData)
                                                                 {
                                                                     _ = try! JSONSerialization.data(withJSONObject: receiveData,
