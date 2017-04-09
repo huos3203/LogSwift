@@ -64,26 +64,7 @@ class DeviceUtil: NSObject
     
     func bySystem_profiler(){
         //判断是否已经持久化
-        if UserDefaults.standard.bool(forKey: "kbySystem_profiler")
-        {
-            serial_number = UserDefaults.standard.object(forKey: "kserial_number") as! String
-            machine_model = UserDefaults.standard.object(forKey: "kmachine_model") as! String
-#if os(OSX)
-            platform_UUID = UserDefaults.standard.object(forKey: "kplatform_UUID") as! String
-            cpu_type = UserDefaults.standard.object(forKey: "kcpu_type") as! String
-            physical_memory = UserDefaults.standard.object(forKey: "kphysical_memory") as! String
-#else
-            equip_host = UIDevice.current.name
-            UserDefaults.standard.set(equip_host, forKey: "kequip_host")
-#endif
-            username = UserDefaults.standard.object(forKey: "kusername") as! String
-            account_name = UserDefaults.standard.object(forKey: "kaccount_name") as! String
-            account_password = UserDefaults.standard.object(forKey: "kaccount_password") as! String
-            network_type = UserDefaults.standard.object(forKey: "knetwork_type") as! String
-            token = UserDefaults.standard.object(forKey: "ktoken") as! String
-            login_type = UserDefaults.standard.object(forKey: "klogin_type") as! String
-        }
-        else
+        if !UserDefaults.standard.bool(forKey: "kbySystem_profiler")
         {
             #if os(OSX)
                 let pipe = Pipe()
@@ -100,7 +81,7 @@ class DeviceUtil: NSObject
             #elseif os(iOS)
                 machine_model = UIDevice.current.model
                 UserDefaults.standard.set(machine_model, forKey: "kmachine_model")
-
+                
                 equip_host = UIDevice.current.name
                 UserDefaults.standard.set(equip_host, forKey: "kequip_host")
                 
@@ -109,6 +90,25 @@ class DeviceUtil: NSObject
                 
                 UserDefaults.standard.set(true, forKey: "kbySystem_profiler")
             #endif
+        }
+        else
+        {
+            serial_number = UserDefaults.standard.object(forKey: "kserial_number") as! String
+            machine_model = UserDefaults.standard.object(forKey: "kmachine_model") as! String
+            #if os(OSX)
+                platform_UUID = UserDefaults.standard.object(forKey: "kplatform_UUID") as! String
+                cpu_type = UserDefaults.standard.object(forKey: "kcpu_type") as! String
+                physical_memory = UserDefaults.standard.object(forKey: "kphysical_memory") as! String
+            #else
+                equip_host = UIDevice.current.name
+                UserDefaults.standard.set(equip_host, forKey: "kequip_host")
+            #endif
+            username = UserDefaults.standard.object(forKey: "kusername") as! String
+            account_name = UserDefaults.standard.object(forKey: "kaccount_name") as! String
+            account_password = UserDefaults.standard.object(forKey: "kaccount_password") as! String
+            network_type = UserDefaults.standard.object(forKey: "knetwork_type") as! String
+            token = UserDefaults.standard.object(forKey: "ktoken") as! String
+            login_type = UserDefaults.standard.object(forKey: "klogin_type") as! String
             
         }
     }
@@ -188,7 +188,7 @@ class DeviceUtil: NSObject
     }
     
     
-#if os(OSX)
+    #if os(OSX)
     var driver:io_object_t = 0
     var matchDictionary:CFDictionary! = IOServiceMatching("AppleAHCIDiskDriver")
     var kr:kern_return_t = 0
@@ -219,111 +219,111 @@ class DeviceUtil: NSObject
             }
         }
     }
-#endif
+    #endif
     
 }
 
 #if os(OSX)
-extension DeviceUtil
-{
-
-    /*
-     OC:http://stackoverflow.com/questions/20070333/obtain-model-identifier-string-on-os-x/30448607#30448607
-     swift
-     */
-    func modelIdentifier()->String
+    extension DeviceUtil
     {
-        var service:io_service_t
-        service = IOServiceGetMatchingService(kIOMasterPortDefault,
-                                              IOServiceMatching("IOPlatformExpertDevice"));
         
-        let model:Unmanaged<CFTypeRef>! = IORegistryEntryCreateCFProperty(service,
-                                                                          "model" as CFString!,
-                                                                          kCFAllocatorDefault,
-                                                                          0)
         /*
-         
+         OC:http://stackoverflow.com/questions/20070333/obtain-model-identifier-string-on-os-x/30448607#30448607
+         swift
          */
-        //    let modelIdentifier = model?.takeUnretainedValue() as! String
-        let modelIdentifier = convertCfTypeToString(cfValue: model)
-        IOObjectRelease(service)
-        return modelIdentifier!
-    }
-    
-    /*
-     https://vandadnp.wordpress.com/2014/07/07/swift-convert-unmanaged-to-string/
-     Unmanaged<CFTypeRef>? : 非托管对象
-     * 在Swift和C语言进行混编的过程中,产生的一个临时对象,真正使用的时候需要将非托管对象,转成真正的对象才能进行使用
-     * takeUnretainedValue : 表示在转化的过程中,不会对对象进行一次retain操作
-     * takeRetainedValue : 表示在转化的过程中,有对对象进行一次retain操作
-     注意:一旦使用takeRetainedValue,那么必须对之前的非托管对象进行一次release(),否则就会产生内存泄漏
-     let UnManageObjc = ABRecordCopyValue(person, kABPersonLastNameProperty)
-     let lastname = UnManageObjc?.takeRetainedValue() as? String
-     UnManageObjc?.release()
-     */
-    func convertCfTypeToString(cfValue: Unmanaged<AnyObject>!) -> String?{
-        
-        /* Coded by Vandad Nahavandipoor */
-        
-        let value = Unmanaged.fromOpaque(cfValue.toOpaque()).takeUnretainedValue() as CFString
-        if CFGetTypeID(value) == CFStringGetTypeID(){
-            return value as String
-        } else {
-            return nil
-        }
-    }
-    
-    //OC:https://github.com/armadsen/ORSSerialPort/wiki/Getting-Vendor-ID-and-Product-ID
-   
-    func getIODeviceAttributes()->NSDictionary?
-    {
-//        var ioDeviceAttributes:NSDictionary!
-//        var vendorID:NSNumber!
-//        var productID:NSNumber!
-        //
-        var resultDict:NSDictionary!
-        
-        var iterator:io_iterator_t = 0
-        //        io_registry_entry_t
-        let IOKitDevice:io_object_t = 0
-        //        kIORegistryIterateRecursively + kIORegistryIterateParents,
-        var kr:kern_return_t = 0
-        kr = IORegistryEntryCreateIterator(IOKitDevice,
-                                           kIOServicePlane,
-                                           IOOptionBits(kIORegistryIterateRecursively) ,
-                                           &iterator)
-        if ( kr != KERN_SUCCESS)
+        func modelIdentifier()->String
         {
-            return nil
+            var service:io_service_t
+            service = IOServiceGetMatchingService(kIOMasterPortDefault,
+                                                  IOServiceMatching("IOPlatformExpertDevice"));
+            
+            let model:Unmanaged<CFTypeRef>! = IORegistryEntryCreateCFProperty(service,
+                                                                              "model" as CFString!,
+                                                                              kCFAllocatorDefault,
+                                                                              0)
+            /*
+             
+             */
+            //    let modelIdentifier = model?.takeUnretainedValue() as! String
+            let modelIdentifier = convertCfTypeToString(cfValue: model)
+            IOObjectRelease(service)
+            return modelIdentifier!
         }
         
         /*
-         io_object_t():http://stackoverflow.com/questions/25351842/convert-cfstring-to-nsstring-swift/25352739#25352739
+         https://vandadnp.wordpress.com/2014/07/07/swift-convert-unmanaged-to-string/
+         Unmanaged<CFTypeRef>? : 非托管对象
+         * 在Swift和C语言进行混编的过程中,产生的一个临时对象,真正使用的时候需要将非托管对象,转成真正的对象才能进行使用
+         * takeUnretainedValue : 表示在转化的过程中,不会对对象进行一次retain操作
+         * takeRetainedValue : 表示在转化的过程中,有对对象进行一次retain操作
+         注意:一旦使用takeRetainedValue,那么必须对之前的非托管对象进行一次release(),否则就会产生内存泄漏
+         let UnManageObjc = ABRecordCopyValue(person, kABPersonLastNameProperty)
+         let lastname = UnManageObjc?.takeRetainedValue() as? String
+         UnManageObjc?.release()
          */
-        while io_object_t() == IOIteratorNext(iterator) {
+        func convertCfTypeToString(cfValue: Unmanaged<AnyObject>!) -> String?{
             
-            let serialport = IORegistryEntryCreateCFProperty(io_object_t(), kIOCalloutDeviceKey as CFString!, kCFAllocatorDefault, 0)
-            NSLog("serialport----:\(serialport)")
-            var usbProperties:Unmanaged<CFMutableDictionary>?
+            /* Coded by Vandad Nahavandipoor */
+            
+            let value = Unmanaged.fromOpaque(cfValue.toOpaque()).takeUnretainedValue() as CFString
+            if CFGetTypeID(value) == CFStringGetTypeID(){
+                return value as String
+            } else {
+                return nil
+            }
+        }
+        
+        //OC:https://github.com/armadsen/ORSSerialPort/wiki/Getting-Vendor-ID-and-Product-ID
+        
+        func getIODeviceAttributes()->NSDictionary?
+        {
+            //        var ioDeviceAttributes:NSDictionary!
+            //        var vendorID:NSNumber!
+            //        var productID:NSNumber!
             //
-            kr = IORegistryEntryCreateCFProperties(io_object_t(), &usbProperties, kCFAllocatorDefault, 0)
-            if kr == KERN_SUCCESS
+            var resultDict:NSDictionary!
+            
+            var iterator:io_iterator_t = 0
+            //        io_registry_entry_t
+            let IOKitDevice:io_object_t = 0
+            //        kIORegistryIterateRecursively + kIORegistryIterateParents,
+            var kr:kern_return_t = 0
+            kr = IORegistryEntryCreateIterator(IOKitDevice,
+                                               kIOServicePlane,
+                                               IOOptionBits(kIORegistryIterateRecursively) ,
+                                               &iterator)
+            if ( kr != KERN_SUCCESS)
             {
-                if let usbProperties = usbProperties
+                return nil
+            }
+            
+            /*
+             io_object_t():http://stackoverflow.com/questions/25351842/convert-cfstring-to-nsstring-swift/25352739#25352739
+             */
+            while io_object_t() == IOIteratorNext(iterator) {
+                
+                let serialport = IORegistryEntryCreateCFProperty(io_object_t(), kIOCalloutDeviceKey as CFString!, kCFAllocatorDefault, 0)
+                NSLog("serialport----:\(serialport)")
+                var usbProperties:Unmanaged<CFMutableDictionary>?
+                //
+                kr = IORegistryEntryCreateCFProperties(io_object_t(), &usbProperties, kCFAllocatorDefault, 0)
+                if kr == KERN_SUCCESS
                 {
-                    resultDict = usbProperties.takeRetainedValue() as NSDictionary
-                    print(resultDict)
-                    if let vendorID = resultDict [kUSBVendorID],let productID = resultDict[kUSBProductID]
+                    if let usbProperties = usbProperties
                     {
-                        NSLog("kUSBVendorID:\(vendorID),kUSBProductID:\(productID)")
+                        resultDict = usbProperties.takeRetainedValue() as NSDictionary
+                        print(resultDict)
+                        if let vendorID = resultDict [kUSBVendorID],let productID = resultDict[kUSBProductID]
+                        {
+                            NSLog("kUSBVendorID:\(vendorID),kUSBProductID:\(productID)")
+                        }
                     }
                 }
+                //            IOObjectRelease(device);
             }
-            //            IOObjectRelease(device);
+            
+            IOObjectRelease(iterator)
+            return resultDict
         }
-        
-        IOObjectRelease(iterator)
-        return resultDict
     }
-}
 #endif

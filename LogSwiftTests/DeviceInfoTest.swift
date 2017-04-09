@@ -51,7 +51,7 @@ class DeviceInfoTest: XCTestCase {
     }
     
     
-    
+    ///用shell命令,读取系统文件信息 http://www.jianshu.com/p/9cb451b019ed
     func testModelIdentifierFromFile() {
         //
         let pipe = Pipe()
@@ -62,7 +62,7 @@ class DeviceInfoTest: XCTestCase {
         task.launch()
         let outData = pipe.fileHandleForReading.readDataToEndOfFile()
         let outString:String! = String.init(data: outData, encoding: .utf8)
-        //print(outString!)
+        print(outString!)
         let list = (outString! as NSString).propertyList()
         hhhh(list: list)
     }
@@ -72,7 +72,7 @@ class DeviceInfoTest: XCTestCase {
         //UnsafeMutableRawPointer!, _ notification:
         if list is NSMutableArray {
             //
-            var tmparr = list as! NSArray
+            let tmparr = list as! NSArray
             tmparr.enumerateObjects({ (obj, index, stop) in
                 //
                 if obj is NSDictionary
@@ -105,6 +105,7 @@ class DeviceInfoTest: XCTestCase {
     
     func testModel() {
         //
+        PBBLogModel.setUserInfo()
         NSLog(DeviceUtil().modelIdentifier())
     }
     
