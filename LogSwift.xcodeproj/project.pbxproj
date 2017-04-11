@@ -59,7 +59,6 @@
 /* Begin PBXFileReference section */
 		0A9A87C71220BE3CDA033696 /* Pods-LogSwiftForiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForiOS/Pods-LogSwiftForiOS.release.xcconfig"; sourceTree = "<group>"; };
 		144746581E9CB02A00FC0F29 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
-		144746591E9CB1A200FC0F29 /* 查看源.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "查看源.html"; path = "../../Desktop/查看源.html"; sourceTree = "<group>"; };
 		144B8E1D1E978F9B009969E8 /* DeviceInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoTest.swift; sourceTree = "<group>"; };
 		1483B7ED1E825A5A009D8C42 /* PBBLogSDKTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBLogSDKTests.swift; sourceTree = "<group>"; };
 		14E006FB1DF01A820056CBEF /* LogSwiftForiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogSwiftForiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,7 +186,6 @@
 				14E006FF1DF01A830056CBEF /* InfoForiOS.plist */,
 				09D06E7D45823D9CDB1216B1 /* Pods */,
 				144746581E9CB02A00FC0F29 /* readme.md */,
-				144746591E9CB1A200FC0F29 /* 查看源.html */,
 			);
 			path = LogSwift;
 			sourceTree = "<group>";

@@ -1,44 +1,100 @@
+暂时支持OSX系统：
+依赖库及版本：pod 'RNCryptor', '~> 5.0.1'   //实现aes密钥加密
+
+改进：OC中支持枚举（日志类型，登录类型，APP类型，网路类型）
+## 方法介绍
+
+### 第一种：工厂模式（仅支持Swift）
+使用PBBLogAPI工厂提供单例模式上传，主要考虑日后扩展：
+    let url = "http://192.168.85.92:8099/HostMonitor/client/log/addLog"
+    let model = PBBLogModel.init(.FATAL, in: .ReaderMac, desc: "dddd")    ／／日志描述
+    PBBLogAPI.shareInstance.upLoadLog(to: url, logModel: model)             ／／上传
+
+### 第二种：LogModel实例单行上传
+主要是对LogModel实例赋予了上传功能：
+    swift ：PBBLogModel(.INFO, in: .ReaderMac, desc: "申请激活+1").sendTo()    //上传到指定服务器：.sendTo(server:"URLString")
+    object-c：[[[PBBLogModel alloc] inittWithType:LogINFO inApp:APPReaderMac desc:@"查看文件时，更新数据库中的本地路径"] sendToServer];  //不支持指定服务器
+
+## 使用说明
+* 第一步：下载程序包，拖入项目
+* 第二步：在（swift ／OC）中使用
+### OC中使用
+导入：`#import "PBBLogSDK.h“`
+调用：
+```objc
+[[[PBBLogModel alloc] inittWithType:LogINFO inApp:APPReaderMac desc:@"查看文件时，更新数据库中的本地路径"] sendToServer]
+```
+> 注：由于swift 枚举类型和OC枚举类型的差异，暂时有数字代替，映射到swift枚举中。
+映射具体实现：
+    case 1:  logType = .FATAL  
+    case 2:  logType = .ERROR     
+    case 3:  logType = .WARN       
+    case 4:  logType = .DEBUG 
+    default: logType = .INFO
+
+### swift 使用
+导入：`import PBBLogSDK`
+调用：`PBBLogModel(.INFO, in: .ReaderMac, desc: "申请激活+1").sendTo()`
 
 
+IOS支持：安装需要步骤：
+![](912258FD-8ECB-42AB-AE21-B06A147462F3.png)
 
+单元测试效果，上传到服务器的数据如下：
+    xctest[55959:896729] {
+    "application_name" : "Reader for OS",
+    "device_info" : "huoshug.local",
+    "extension1" : "",
+    "token" : "Mac token",
+    "description" : "",
+    "file_name" : "PBBLogSDKTests.swift",
+    "imei" : "9CD72BC0-6A49-516F-AC8C-C0D10796535A",
+    "level" : "INFO",
+    "system" : "Mac",
+    "extension3" : "",
+    "username" : "Mac user",
+    "content" : "11\/28\/2016 12:18:22:002 xctest[55959:?] \/Users\/pengyucheng\/git-svn\/PBBReader\/PBBLogSDKTests\/PBBLogSDKTests.swift(49) testMyMethod():\r\查看文件时，更新数据库中的本地路径\n",
+    "desc" : "dddd",
+    "op_version" : "Version 10.12.1 (Build 16B2555)",
+    "equip_serial" : "C07L41M6DWYM",
+    "equip_host" : "",
+    "account_password" : "AwEjXApASgaC2Oo0sGPvIxcJevU2qO5MiIGP4PMmL00y7t0AZ5zl4uapZ9BtdfKc8bPTXQfANgkg1XpyuD6SpPCaIKGV3VfNcNkEht1WVtR0BQ==",
+    "lines" : 49,
+    "login_type" : "Mac",
+    "method_name" : "testMyMethod()",
+    "extension2" : "",
+    "account_name" : "",
+    "sdk_version" : "10.12.1",
+    "equip_model" : "Macmini6,2"
+    }
 
+## 进阶加密算法
+RNCryptor:
+### 如何加密/解密字符串？
+AES加密字节。它不加密的字符，字母，文字，图片，视频，cats或ennui。它仅加密byte类型。您需要将其他的东西（如字符串）和bytes类型通过同一种方式相互转换。有几种方法可以做到。一些最受欢迎的是UTF-8编码，Base-64编码，和十六进制编码。还有许多其他的选择。请不要让RNCryptor来推测你使用的编码格式，它不会这么做的。它接受NSData类型并返回bytes类型。
+String和utf8编码的NSData互转：
+    let data = "sdfhskhfsj".data(using: .utf8)!    // OC: dataUsingEncoding()
+    let string = String.init(data: data, encoding: .utf8)!  
+String和Base-64编码的NSData互转：
+    let data = NSData.init(base64Encoded:"sdfhskhfsj", options: .ignoreUnknownCharacters)
+    let string = data.base64EncodedData(options: .endLineWithCarriageReturn)
 
+### 基于密钥的加密 key-based encryption 
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>查看源</title>
-<link rel="canonical" href="/pages/viewpage.action?pageId=2457817" />
-<script>
-window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};
-WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-rest:web-resource-manager.resource-base-url-pattern"]="\"(?:(?:/s/.*?/_)?/download)\"";
-WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"\"";
-WRM._unparsedData["com.atlassian.plugins.browser.metrics.browser-metrics-plugin:browser-metrics.feature-data-provider-legacy"]="true";
-</script>
-<link type="text/css" rel="stylesheet" href="/s/17d5bc954eca2246e5bfb1f925a1f5e2-CDN/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/14/_/download/superbatch/css/batch.css?build-number=5989" media="all">
-<!--[if lt IE 9]>
- <link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/14/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
- <![endif]-->
-<!--[if lte IE 9]>
- <link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/14/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
- <![endif]-->
-<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/b7e1afeeeee7f6358414d4e4d543d3e0/_/download/contextbatch/css/plugin.viewsource/batch.css" media="all">
-<link type="text/css" rel="stylesheet" href="/s/32d1126ced4106d7ec54af21515b17a8-CDN/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/fa5a4fbf9d58fdb4efd11686317d6a64/_/download/contextbatch/css/page/batch.css" media="all">
-<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/fa5a4fbf9d58fdb4efd11686317d6a64/_/download/contextbatch/css/page/batch.css?media=print" media="print">
-<!--[if lt IE 9]>
- <link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/fa5a4fbf9d58fdb4efd11686317d6a64/_/download/contextbatch/css/page/batch.css?conditionalComment=lt+IE+9" media="all">
- <![endif]-->
-<link type="text/css" rel="stylesheet" href="/s/58581389ee11916739b9f981f5b7f859-CDN/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/4285467e2e6294af32c0178b361b7a7b/_/download/contextbatch/css/editor-content/batch.css" media="all">
-<!--[if lte IE 9]>
- <link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/4285467e2e6294af32c0178b361b7a7b/_/download/contextbatch/css/editor-content/batch.css?conditionalComment=lte+IE+9" media="all">
- <![endif]-->
-<link type="text/css" rel="stylesheet" href="/s/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/1/_/styles/colors.css?spaceKey=chuangshitaikeyanfakongjian" media="all">
-<link type="text/css" rel="stylesheet" href="/s/zh_CN/5989/aaad9997c145089d7f38b9dea0ac5b91728ef55a.1/1.0/_/download/resources/com.atlassian.confluence.themes.default:styles/default-theme.css" media="all">
+您需要一个小的专业知识正确使用基于密钥的加密，并且它是非常容易导致不安全的系统，看起来安全。最重要的规则是，密钥必须是随机的，在所有他们的字节。如果你不熟悉基本概念如AES-CBC加密，IV，和HMAC，你应该避免使用基于密钥的加密。
 
-</head>
+使用基于密钥的加密，这是一个特定的长度的随机byte序列。RNCryptor V3格式使用256位（32字节）进行加密和认证密钥。
 
-<body class="mceContentBody aui-theme-default wiki-content fullsize">
-<p>&nbsp;</p>         <h2>点击下载：<strong><a href="https://192.168.85.6/svn/Installation_Package/mac%20os/PBBLogSDK1.0.0.framework">PBBLogSDK1.0.0.framework</a></strong></h2><p>暂时支持OSX系统：</p><p>依赖库及版本：<strong><span style="color: rgb(255,0,255);">pod </span>'RNCryptor'<span style="color: rgb(231,232,235);">, </span>'~&gt; 5.0.1'   </strong><span style="color: rgb(0,128,0);">//实现aes密钥加密</span></p><p><span style="color: rgb(0,128,0);"> </span></p><h3><strong>RNCryptor:</strong></h3><h3>How do I encrypt/decrypt a string?</h3><p>AES encrypts bytes. It does not encrypt characters, letters, words, pictures, videos, cats, or ennui. It encrypts bytes. You need to convert other things (such as strings) to and from bytes in a consistent way. There are several ways to do that. Some of the most popular are UTF-8 encoding, Base-64 encoding, and Hex encoding. There are many other options. There is no good way for RNCryptor to guess which encoding you want, so it doesn't try. It accepts and returns bytes in the form of <code>NSData</code>.</p><p>To convert strings to data as UTF-8, use <code>dataUsingEncoding()</code> and <code>init(data:encoding:)</code>. To convert strings to data as Base-64, use <code>init(base64EncodedString:options:)</code> and <code>base64EncodedStringWithOptions()</code>.</p><p>如何加密/解密字符串？<br />AES加密字节。它不加密的字符，字母，文字，图片，视频，cats或ennui。它仅加密byte类型。您需要将其他的东西（如字符串）和bytes类型通过同一种方式相互转换。有几种方法可以做到。一些最受欢迎的是UTF-8编码，Base-64编码，和十六进制编码。还有许多其他的选择。请不要让RNCryptor来推测你使用的编码格式，它不会这么做的。它接受NSData类型并返回bytes类型。</p><p><span style="color: rgb(0,175,202);">String</span>和<span style="color: rgb(0,128,0);">utf8</span>编码的<span style="color: rgb(0,175,202);">NSData</span>互转：</p><p><span style="color: rgb(194,52,155);">let</span><span style="color: rgb(255,255,255);"><span style="color: rgb(128,0,0);"> data</span> <span style="color: rgb(0,0,0);">= </span></span><span style="color: rgb(228,67,71);">&quot;sdfhskhfsj&quot;</span><span style="color: rgb(128,0,0);">.</span><span>data</span><span style="color: rgb(255,255,255);"><span style="color: rgb(0,0,0);">(</span><span style="color: rgb(128,0,0);">using</span><span style="color: rgb(128,0,0);">: </span></span><span style="color: rgb(128,0,0);">.</span><span style="color: rgb(0,128,0);">utf8</span><span style="color: rgb(255,255,255);"><span style="color: rgb(128,0,0);"><span style="color: rgb(0,0,0);">)</span>!    // OC: <code>dataUsingEncoding()</code></span></span></p><p><span style="color: rgb(255,255,255);"><span style="color: rgb(128,0,0);"><span style="color: rgb(194,52,155);">let</span> string = </span></span><span style="color: rgb(0,175,202);">String</span>.<span style="color: rgb(194,52,155);">init</span>(data: <span style="color: rgb(128,0,0);">data</span>, encoding: .<span style="color: rgb(0,175,202);">utf8</span>)<span style="color: rgb(128,0,0);">!  </span></p><p><span style="color: rgb(0,175,202);">String</span>和<span style="color: rgb(0,128,0);">Base-64</span>编码的<span style="color: rgb(0,175,202);">NSData</span>互转：</p><p><span><span style="color: rgb(194,52,155);">let</span><span style="color: rgb(255,255,255);"><span style="color: rgb(128,0,0);"> data</span> <span style="color: rgb(0,0,0);">= <span style="color: rgb(0,175,202);">NSData</span></span></span>.</span><span style="color: rgb(194,52,155);">init</span><span>(base64Encoded:<span style="color: rgb(228,67,71);">&quot;sdfhskhfsj&quot;</span>, options: </span><span style="color: rgb(128,0,0);">.</span><span style="color: rgb(128,128,0);">ignoreUnknownCharacters</span>)</p><p>let <span style="color: rgb(128,0,0);">string</span> = <span style="color: rgb(128,0,0);">data</span><span style="color: rgb(128,0,0);">.</span>base64EncodedData<span style="color: rgb(255,255,255);"><span style="color: rgb(0,0,0);">(options:</span> <span style="color: rgb(128,0,0);">.</span></span><span style="color: rgb(128,128,0);">endLineWithCarriageReturn</span><span style="color: rgb(0,0,0);">)</span></p><p><span style="font-size: 16.0px;font-weight: bold;"><br /></span></p><p><span style="font-size: 16.0px;font-weight: bold;">基于密钥的加密 </span><em style="font-size: 16.0px;font-weight: bold;">key-based encryption</em><span style="color: rgb(0,0,0);"> </span></p><p><em>You need a little expertise to use key-based encryption correctly, and it is very easy to make insecure systems that look secure. The most important rule is that keys must be random across all their bytes. If you're not comfortable with basic cryptographic concepts like AES-CBC, IV, and HMAC, you probably should avoid using key-based encryption.</em></p><p><em>您需要一个小的专业知识正确使用基于密钥的加密，并且它是非常容易导致不安全的系统，看起来安全。最重要的规则是，密钥必须是随机的，在所有他们的字节。如果你不熟悉基本概念如AES-CBC加密，IV，和HMAC，你应该避免使用基于密钥的加密。</em></p><p>Cryptography works with keys, which are random byte sequences of a specific length. The RNCryptor v3 format uses two 256-bit (32-byte) keys to perform encryption and authentication.</p><p><em><em>使用基于密钥的加密</em>，这是一个特定的长度的随机byte序列。RNCryptor V3格式使用256位（32字节）进行加密和认证密钥。</em></p><p>Passwords are not &quot;random byte sequences of a specific length.&quot; They're not random at all, and they can be a wide variety of lengths, very seldom exactly 32. RNCryptor defines a specific and secure way to convert passwords into keys, and that is one of it's primary features.</p><p>密码不是一个特定长度的“随机字节序列”，它们不是随机的，它们可以是各种各样的长度，很少精确的32。RNCryptor定义一个特定的和安全的方法用于将密码转换到钥匙中，这是它的一个主要特征。<span style="color: rgb(0,0,0);"> </span></p><p>Occasionally there are reasons to work directly with random keys. Converting a password into a key is intentionally slow (tens of milliseconds). Password-encrypted messages are also a 16 bytes longer than key-encrypted messages. If your system encrypts and decrypts many short messages, this can be a significant performance impact, particularly on a server.</p><p>有时会直接用随机密钥来工作。把一个密码转换成一个密钥是故意慢（几十毫秒）。密码加密的消息也是一个16byte字节的时间要比密钥加密的消息更久一点。如果你的系统对许多短的消息进行加密和解密的额操作，这无疑会对系统的性能造成非常大的影响，特别是在服务器上。<span style="color: rgb(0,0,0);"> </span></p><p>RNCryptor supports direct key-based encryption and decryption. The size and number of keys may change between format versions, so key-based cryptors are <a href="https://github.com/RNCryptor/RNCryptor#version-specific-cryptors">version-specific</a>.</p><p>RNCryptor支持基于密钥加密和解密直接操作，多个密钥的size 和数量可能会改变他们之间的格式版本，所以基于密钥加密是特定的版本加密方式。</p><p>In order to be secure, the keys must be a random sequence of bytes. See <a href="https://github.com/RNCryptor/RNCryptor#converting-a-password-to-a-key">Converting a Password to a Key</a> for how to create random sequences of bytes if you only have a password.</p><p>为了确保是安全的，密钥必须是一个随机的byte序列。参照<a href="https://github.com/RNCryptor/RNCryptor#converting-a-password-to-a-key">Converting a Password to a Key</a>帮助当你只有一个密码时，如何创建byte随机序列。</p><p><span style="font-size: 16.0px;font-weight: bold;"><br /></span></p><p><span style="font-size: 16.0px;font-weight: bold;">Best practice security</span></p><p><span style="color: rgb(0,128,0);"> </span>Wherever possible within the above constraints, the best available algorithms are applied. This means AES-256, HMAC+SHA256, and PBKDF2. (Note that several of these decisions were reasonable for v3, but may change for v4.)</p><ul><li><p>AES-256. While Bruce Schneier has made some interesting recommendations regarding moving to AES-128 due to certain attacks on AES-256, my current thinking is in line with <a href="http://www.daemonology.net/blog/2009-07-31-thoughts-on-AES.html">Colin Percival</a>. PBKDF2 output is effectively random, which should negate related-keys attacks against the kinds of use cases we're interested in.</p></li><li><p>AES-CBC mode. This was a somewhat complex decision, but the ubiquity of CBC outweighs other considerations here. There are no major problems with CBC mode, and nonce-based modes like CTR have other trade-offs. See <a href="http://robnapier.net/mode-rncryptor">&quot;Mode changes for RNCryptor&quot;</a> for more details on this decision.</p></li><li><p>Encrypt-then-MAC. If there were a good authenticated AES mode on iOS (GCM for instance), I would probably use that for its simplicity. Colin Percival makes <a href="http://www.daemonology.net/blog/2009-06-24-encrypt-then-mac.html">good arguments for hand-coding an encrypt-then-MAC</a> rather than using an authenticated AES mode, but in RNCryptor mananging the HMAC actually adds quite a bit of complexity. I'd rather the complexity at a more broadly peer-reviewed layer like CommonCryptor than at the RNCryptor layer. But this isn't an option, so I fall back to my own Encrypt-than-MAC.</p></li><li><p>HMAC+SHA256. No surprises here.</p></li><li><p>PBKDF2. While bcrypt and scrypt may be more secure than PBKDF2, CommonCryptor only supports PBKDF2. <a href="http://security.stackexchange.com/questions/4781/do-any-security-experts-recommend-bcrypt-for-password-storage">NIST also continues to recommend PBKDF2</a>. We use 10k rounds of PBKDF2 which represents about 80ms on an iPhone 4.</p></li></ul><h1><strong><span style="color: rgb(0,128,0);"><span style="color: rgb(255,0,0);">改进：OC中支持枚举（日志类型，登录类型，APP类型，网路类型</span><span style="color: rgb(255,0,0);">）</span></span></strong></h1><h1><strong>方法介绍</strong></h1><p><span style="font-size: 16.0px;font-weight: bold;">第一种：工厂模式（仅支持Swift）</span></p><p>使用PBBLogAPI工厂提供单例模式上传，主要考虑日后扩展：</p><p style="margin-left: 30.0px;"><strong><span style="color: rgb(81,195,79);"> let url = &quot;<a href="http://192.168.85.92:8099/HostMonitor/client/log/addLog"><span style="color: rgb(101,68,233);">http://192.168.85.92:8099/HostMonitor/client/log/addLog</span></a>&quot;</span></strong></p><p style="margin-left: 30.0px;"><strong> l<span style="color: rgb(225,45,160);">et</span> model = PBBLogModel.<span style="color: rgb(225,45,160);">init</span>(.FATAL, in: .ReaderMac, desc: <span style="color: rgb(222,58,60);">&quot;dddd&quot;</span>)    ／／日志描述</strong></p><p style="margin-left: 30.0px;"><strong> PBBLogAPI.shareInstance.upLoadLog(to: url, logModel: model)             ／／上传</strong></p><p style="margin-left: 30.0px;"><strong><br /></strong></p><p><span style="font-size: 16.0px;font-weight: bold;">第二种：LogModel实例单行上传</span></p><p><span style="font-size: 14.0px;">主要是对LogModel实例赋予了上传功能：</span></p><p style="margin-left: 30.0px;"><strong>swift ：PBBLogModel<span style="color: rgb(128,0,0);">(.</span>INFO<span style="color: rgb(231,232,235);">,<span style="color: rgb(128,0,0);"> in: </span>.</span>ReaderMac<span style="color: rgb(231,232,235);">,<span style="color: rgb(128,0,0);"> desc:</span> </span><span style="color: rgb(222,58,60);">&quot;</span><span style="color: rgb(222,58,60);">申请激活</span><span style="color: rgb(222,58,60);">+1&quot;</span><span style="color: rgb(128,0,0);">).</span>sendTo<span style="color: rgb(128,0,0);">()    <span style="color: rgb(0,128,0);">//</span></span></strong><span style="color: rgb(0,128,0);">上传到指定服务器</span><strong><span style="color: rgb(128,0,0);">：<strong><span style="color: rgb(0,51,102);">.sendTo</span><span style="color: rgb(128,0,0);">(server:&quot;<span style="color: rgb(0,51,102);">URLString</span>&quot;)</span></strong></span></strong></p><p style="margin-left: 30.0px;"><strong>object-c：[[[PBBLogModel alloc] inittWithType:<span style="color: rgb(0,170,163);">LogINFO</span> inApp:<span style="color: rgb(0,128,128);">APPReaderMac</span> desc:<span style="color: rgb(222,58,60);">@&quot;</span><span style="color: rgb(222,58,60);">查看文件时，更新数据库中的本地路径</span><span style="color: rgb(222,58,60);">&quot;</span>] sendToServer]; </strong> <span style="color: rgb(0,128,0);">//不支持指定服务器</span></p><h1><strong>使用说明</strong></h1><p><strong>第一步</strong>：下载程序包，拖入项目</p><p><strong>第二步</strong>：在（swift ／OC）中使用</p><h3> 1. OC中使用</h3><p style="margin-left: 30.0px;">导入：<strong><span style="color: rgb(211,141,93);">#import </span>&quot;PBBLogSDK.h“</strong></p><p style="margin-left: 30.0px;">调用：<strong>[[[PBBLogModel alloc] inittWithType:<span style="color: rgb(0,170,163);">LogINFO</span> inApp:<span style="color: rgb(0,128,128);">APPReaderMac</span> desc:<span style="color: rgb(222,58,60);">@&quot;</span><span style="color: rgb(222,58,60);">查看文件时，更新数据库中的本地路径</span><span style="color: rgb(222,58,60);">&quot;</span>] sendToServer]</strong></p><p><s>注：由于swift 枚举类型和OC枚举类型的差异，暂时有数字代替，映射到swift枚举中。</s></p><p><s>映射具体实现：<span style="color: rgb(225,45,160);">case</span> <span style="color: rgb(0,170,163);">1</span>:  logType = .<span style="color: rgb(24,181,177);">FATAL</span>   <span style="color: rgb(225,45,160);">case</span> <span style="color: rgb(0,170,163);">2</span>:  logType = .<span style="color: rgb(24,181,177);">ERROR</span>        <span style="color: rgb(225,45,160);">case</span> <span style="color: rgb(0,170,163);">3</span>:  logType = .<span style="color: rgb(24,181,177);">WARN</span>        <span style="color: rgb(225,45,160);">case</span> <span style="color: rgb(0,170,163);">4</span>:  logType = .<span style="color: rgb(24,181,177);">DEBUG</span> <span style="color: rgb(225,45,160);">default</span>: logType = .<span style="color: rgb(24,181,177);">INFO</span></s></p><h3><span>2. swift 使用</span></h3><div style="margin-left: 30.0px;">导入：<strong><span style="color: rgb(225,45,160);">import</span> PBBLogSDK</strong></div><div style="margin-left: 30.0px;">调用：<strong>PBBLogModel<span style="color: rgb(128,0,0);">(.</span>INFO<span style="color: rgb(231,232,235);">,<span style="color: rgb(128,0,0);"> in: </span>.</span>ReaderMac<span style="color: rgb(231,232,235);">,<span style="color: rgb(128,0,0);"> desc:</span> </span><span style="color: rgb(222,58,60);">&quot;</span><span style="color: rgb(222,58,60);">申请激活</span><span style="color: rgb(222,58,60);">+1&quot;</span><span style="color: rgb(128,0,0);">).</span>sendTo<span style="color: rgb(128,0,0);">()</span></strong></div><div style="margin-left: 30.0px;"><strong><span style="color: rgb(128,0,0);"><br /></span></strong></div><div style="margin-left: 30.0px;"><strong><span style="color: rgb(128,0,0);"><br /></span></strong></div><h1><span style="color: rgb(128,0,0);"><strong>IOS支持：安装需要步骤：</strong></span></h1><p><span style="color: rgb(128,0,0);"><strong><img class="confluence-embedded-image" src="/download/attachments/2457817/912258FD-8ECB-42AB-AE21-B06A147462F3.png?version=1&amp;modificationDate=1480569068871&amp;api=v2" data-image-src="/download/attachments/2457817/912258FD-8ECB-42AB-AE21-B06A147462F3.png?version=1&amp;modificationDate=1480569068871&amp;api=v2" data-unresolved-comment-count="0" data-linked-resource-id="2457873" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="912258FD-8ECB-42AB-AE21-B06A147462F3.png" data-base-url="http://192.168.85.6:8090" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2457817" data-linked-resource-container-version="17" title="创世泰克研发空间 > 2016/11/28 > PBBLogSDK > 912258FD-8ECB-42AB-AE21-B06A147462F3.png" data-location="创世泰克研发空间 > 2016/11/28 > PBBLogSDK > 912258FD-8ECB-42AB-AE21-B06A147462F3.png" data-image-height="243" data-image-width="633"><br /></strong></span></p><div style="margin-left: 30.0px;"><p> </p><p><span style="color: rgb(128,0,0);"><u>单元测试效果，上传到服务器的数据如下：</u></span></p><p><span style="color: rgb(51,51,51);">xctest[55959:896729] {</span></p><p><span style="color: rgb(51,51,51);">  &quot;application_name&quot; : &quot;Reader for OS&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;device_info&quot; : &quot;huoshug.local&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;extension1&quot; : &quot;&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;token&quot; : &quot;Mac token&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;description&quot; : &quot;&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;file_name&quot; : &quot;PBBLogSDKTests.swift&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;imei&quot; : &quot;9CD72BC0-6A49-516F-AC8C-C0D10796535A&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;level&quot; : &quot;INFO&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;system&quot; : &quot;Mac&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;extension3&quot; : &quot;&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;username&quot; : &quot;Mac user&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;content&quot; : &quot;11\/28\/2016 12:18:22:002 xctest[55959:?] \/Users\/pengyucheng\/git-svn\/PBBReader\/PBBLogSDKTests\/PBBLogSDKTests.swift(49) testMyMethod():\r\查看文件时，更新数据库中的本地路径\n&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;desc&quot; : &quot;dddd&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;op_version&quot; : &quot;Version 10.12.1 (Build 16B2555)&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;equip_serial&quot; : &quot;C07L41M6DWYM&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;equip_host&quot; : &quot;&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;account_password&quot; : &quot;AwEjXApASgaC2Oo0sGPvIxcJevU2qO5MiIGP4PMmL00y7t0AZ5zl4uapZ9BtdfKc8bPTXQfANgkg1XpyuD6SpPCaIKGV3VfNcNkEht1WVtR0BQ==&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;lines&quot; : 49,</span></p><p><span style="color: rgb(51,51,51);">  &quot;login_type&quot; : &quot;Mac&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;method_name&quot; : &quot;testMyMethod()&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;extension2&quot; : &quot;&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;account_name&quot; : &quot;&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;sdk_version&quot; : &quot;10.12.1&quot;,</span></p><p><span style="color: rgb(51,51,51);">  &quot;equip_model&quot; : &quot;Macmini6,2&quot;</span></p><p><span style="color: rgb(51,51,51);">}</span></p></div><div><span><br /></span></div>
-<p>&nbsp;</p>
-</body>
-</html>
+密码不是一个特定长度的“随机字节序列”，它们不是随机的，它们可以是各种各样的长度，很少精确的32。RNCryptor定义一个特定的和安全的方法用于将密码转换到钥匙中，这是它的一个主要特征。 
+
+有时会直接用随机密钥来工作。把一个密码转换成一个密钥是故意慢（几十毫秒）。密码加密的消息也是一个16byte字节的时间要比密钥加密的消息更久一点。如果你的系统对许多短的消息进行加密和解密的额操作，这无疑会对系统的性能造成非常大的影响，特别是在服务器上。 
+RNCryptor支持基于密钥加密和解密直接操作，多个密钥的size 和数量可能会改变他们之间的格式版本，所以基于密钥加密是特定的版本加密方式。
+为了确保是安全的，密钥必须是一个随机的byte序列。参照Converting a Password to a Key帮助当你只有一个密码时，如何创建byte随机序列。
+
+Best practice security
+Wherever possible within the above constraints, the best available algorithms are applied. This means AES-256, HMAC+SHA256, and PBKDF2. (Note that several of these decisions were reasonable for v3, but may change for v4.)
+AES-256. While Bruce Schneier has made some interesting recommendations regarding moving to AES-128 due to certain attacks on AES-256, my current thinking is in line with Colin Percival. PBKDF2 output is effectively random, which should negate related-keys attacks against the kinds of use cases we're interested in.
+AES-CBC mode. This was a somewhat complex decision, but the ubiquity of CBC outweighs other considerations here. There are no major problems with CBC mode, and nonce-based modes like CTR have other trade-offs. See "Mode changes for RNCryptor" for more details on this decision.
+Encrypt-then-MAC. If there were a good authenticated AES mode on iOS (GCM for instance), I would probably use that for its simplicity. Colin Percival makes good arguments for hand-coding an encrypt-then-MAC rather than using an authenticated AES mode, but in RNCryptor mananging the HMAC actually adds quite a bit of complexity. I'd rather the complexity at a more broadly peer-reviewed layer like CommonCryptor than at the RNCryptor layer. But this isn't an option, so I fall back to my own Encrypt-than-MAC.
+HMAC+SHA256. No surprises here.
+PBKDF2. While bcrypt and scrypt may be more secure than PBKDF2, CommonCryptor only supports PBKDF2. NIST also continues to recommend PBKDF2. We use 10k rounds of PBKDF2 which represents about 80ms on an iPhone 4.
