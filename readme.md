@@ -114,16 +114,21 @@ let string = data.base64EncodedData(options: .endLineWithCarriageReturn)
 
 RNCryptor支持基于密钥加密和解密直接操作，多个密钥的size 和数量可能会改变他们之间的格式版本，所以基于密钥加密是特定的版本加密方式。
 
-为了确保是安全的，密钥必须是一个随机的byte序列。参照Converting a Password to a Key帮助当你只有一个密码时，如何创建byte随机序列。
+为了确保是安全的，密钥必须是一个随机的byte序列。参照[Converting a Password to a Key](https://github.com/RNCryptor/RNCryptor#converting-a-password-to-a-key)帮助当你只有一个密码时，如何创建byte随机序列。
 
-### Best practice security
+## Best practice security
 Wherever possible within the above constraints, the best available algorithms are applied. This means AES-256, HMAC+SHA256, and PBKDF2. (Note that several of these decisions were reasonable for v3, but may change for v4.)
 
-AES-256. While Bruce Schneier has made some interesting recommendations regarding moving to AES-128 due to certain attacks on AES-256, my current thinking is in line with Colin Percival. PBKDF2 output is effectively random, which should negate related-keys attacks against the kinds of use cases we're interested in.
+### AES-256.
+While Bruce Schneier has made some interesting recommendations regarding moving to AES-128 due to certain attacks on AES-256, my current thinking is in line with [Colin Percival](http://www.daemonology.net/blog/2009-07-31-thoughts-on-AES.html). PBKDF2 output is effectively random, which should negate related-keys attacks against the kinds of use cases we're interested in.
 
-AES-CBC mode. This was a somewhat complex decision, but the ubiquity of CBC outweighs other considerations here. There are no major problems with CBC mode, and nonce-based modes like CTR have other trade-offs. See "Mode changes for RNCryptor" for more details on this decision.
+### AES-CBC mode. 
+This was a somewhat complex decision, but the ubiquity of CBC outweighs other considerations here. There are no major problems with CBC mode, and nonce-based modes like CTR have other trade-offs. See "[Mode changes for RNCryptor](http://robnapier.net/mode-rncryptor)" for more details on this decision.
 
-Encrypt-then-MAC. If there were a good authenticated AES mode on iOS (GCM for instance), I would probably use that for its simplicity. Colin Percival makes good arguments for hand-coding an encrypt-then-MAC rather than using an authenticated AES mode, but in RNCryptor mananging the HMAC actually adds quite a bit of complexity. I'd rather the complexity at a more broadly peer-reviewed layer like CommonCryptor than at the RNCryptor layer. But this isn't an option, so I fall back to my own Encrypt-than-MAC.
-HMAC+SHA256. No surprises here.
+### Encrypt-then-MAC. 
+If there were a good authenticated AES mode on iOS (GCM for instance), I would probably use that for its simplicity. Colin Percival makes [good arguments for hand-coding an encrypt-then-MAC](http://www.daemonology.net/blog/2009-06-24-encrypt-then-mac.html) rather than using an authenticated AES mode, but in RNCryptor mananging the HMAC actually adds quite a bit of complexity. I'd rather the complexity at a more broadly peer-reviewed layer like CommonCryptor than at the RNCryptor layer. But this isn't an option, so I fall back to my own Encrypt-than-MAC.
+### HMAC+SHA256. 
+No surprises here.
 
-PBKDF2. While bcrypt and scrypt may be more secure than PBKDF2, CommonCryptor only supports PBKDF2. NIST also continues to recommend PBKDF2. We use 10k rounds of PBKDF2 which represents about 80ms on an iPhone 4.
+### PBKDF2.
+While bcrypt and scrypt may be more secure than PBKDF2, CommonCryptor only supports PBKDF2. [NIST also continues to recommend PBKDF2](http://security.stackexchange.com/questions/4781/do-any-security-experts-recommend-bcrypt-for-password-storage). We use 10k rounds of PBKDF2 which represents about 80ms on an iPhone 4.
