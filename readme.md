@@ -1,46 +1,65 @@
 暂时支持OSX系统：
-依赖库及版本：pod 'RNCryptor', '~> 5.0.1'   //实现aes密钥加密
+依赖库及版本：
+```ruby
+pod 'RNCryptor', '~> 5.0.1'   //实现aes密钥加密
+```
 
 改进：OC中支持枚举（日志类型，登录类型，APP类型，网路类型）
 ## 方法介绍
 
 ### 第一种：工厂模式（仅支持Swift）
 使用PBBLogAPI工厂提供单例模式上传，主要考虑日后扩展：
+```swift
     let url = "http://192.168.85.92:8099/HostMonitor/client/log/addLog"
     let model = PBBLogModel.init(.FATAL, in: .ReaderMac, desc: "dddd")    ／／日志描述
     PBBLogAPI.shareInstance.upLoadLog(to: url, logModel: model)             ／／上传
+````
 
 ### 第二种：LogModel实例单行上传
 主要是对LogModel实例赋予了上传功能：
-    swift ：PBBLogModel(.INFO, in: .ReaderMac, desc: "申请激活+1").sendTo()    //上传到指定服务器：.sendTo(server:"URLString")
-    object-c：[[[PBBLogModel alloc] inittWithType:LogINFO inApp:APPReaderMac desc:@"查看文件时，更新数据库中的本地路径"] sendToServer];  //不支持指定服务器
-
+swift上传到指定服务器
+```swift
+PBBLogModel(.INFO, in: .ReaderMac, desc: "申请激活+1").sendTo()   
+.sendTo(server:"URLString") //上传到指定服务器
+```
+objc 不支持指定服务器
+```objc
+[[[PBBLogModel alloc] inittWithType:LogINFO inApp:APPReaderMac desc:@"查看文件时，更新数据库中的本地路径"] sendToServer];  //不支持指定服务器
+```
 ## 使用说明
 * 第一步：下载程序包，拖入项目
 * 第二步：在（swift ／OC）中使用
-### OC中使用
-导入：`#import "PBBLogSDK.h“`
+#### OC中使用
+导入：`#import "PBBLogSDK.h"`  
 调用：
 ```objc
 [[[PBBLogModel alloc] inittWithType:LogINFO inApp:APPReaderMac desc:@"查看文件时，更新数据库中的本地路径"] sendToServer]
 ```
 > 注：由于swift 枚举类型和OC枚举类型的差异，暂时有数字代替，映射到swift枚举中。
+
 映射具体实现：
-    case 1:  logType = .FATAL  
-    case 2:  logType = .ERROR     
-    case 3:  logType = .WARN       
-    case 4:  logType = .DEBUG 
-    default: logType = .INFO
-
-### swift 使用
-导入：`import PBBLogSDK`
-调用：`PBBLogModel(.INFO, in: .ReaderMac, desc: "申请激活+1").sendTo()`
-
+```swift
+case 1:  logType = .FATAL  
+case 2:  logType = .ERROR     
+case 3:  logType = .WARN       
+case 4:  logType = .DEBUG 
+default: logType = .INFO
+```
+#### swift 使用
+导入：
+```swift
+import PBBLogSDK
+```
+调用：
+```swift
+PBBLogModel(.INFO, in: .ReaderMac, desc: "申请激活+1").sendTo()
+```
 
 IOS支持：安装需要步骤：
 ![](912258FD-8ECB-42AB-AE21-B06A147462F3.png)
 
 单元测试效果，上传到服务器的数据如下：
+```json
     xctest[55959:896729] {
     "application_name" : "Reader for OS",
     "device_info" : "huoshug.local",
@@ -67,6 +86,7 @@ IOS支持：安装需要步骤：
     "sdk_version" : "10.12.1",
     "equip_model" : "Macmini6,2"
     }
+```
 
 ## 进阶加密算法
 RNCryptor:
