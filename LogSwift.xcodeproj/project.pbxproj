@@ -372,7 +372,6 @@
 				84C664821E98E2A400A56CB0 /* Sources */,
 				84C664831E98E2A400A56CB0 /* Frameworks */,
 				84C664841E98E2A400A56CB0 /* Resources */,
-				8298525A0F8EAC22E11AD265 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,7 +512,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RNCryptor-macOS/RNCryptor.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -522,25 +521,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8298525A0F8EAC22E11AD265 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LogSwiftforiOSTests/Pods-LogSwiftforiOSTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RNCryptor-iOS/RNCryptor.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogSwiftforiOSTests/Pods-LogSwiftforiOSTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8F4A5A6F20F289EB7E8263C0 /* [CP] Check Pods Manifest.lock */ = {
