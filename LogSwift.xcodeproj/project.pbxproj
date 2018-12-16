@@ -91,6 +91,7 @@
 		84416BF621C67F4500831FDB /* Fastfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fastfile.swift; path = fastlane/Fastfile.swift; sourceTree = "<group>"; };
 		84416C2121C6A45A00831FDB /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = Fastfile; path = fastlane/Fastfile; sourceTree = "<group>"; };
 		84416D9B21C6AA2000831FDB /* .env.default */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.default; sourceTree = "<group>"; };
+		84416D9D21C6AE9600831FDB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = fastlane/README.md; sourceTree = "<group>"; };
 		844A670C1DF07B6700E4E123 /* LogSwiftForOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogSwiftForOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B945EF21C1134A00D187D4 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		84C664861E98E2A400A56CB0 /* LogSwiftforiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogSwiftforiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +165,7 @@
 		14E006F11DF01A820056CBEF = {
 			isa = PBXGroup;
 			children = (
+				84416D9D21C6AE9600831FDB /* README.md */,
 				84416D9B21C6AA2000831FDB /* .env.default */,
 				84416C2121C6A45A00831FDB /* Fastfile */,
 				84416BF521C67F4500831FDB /* Appfile.swift */,
