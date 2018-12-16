@@ -42,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		84416BF321C67DEB00831FDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84416BEF21C67DEB00831FDB /* FastlaneSwiftRunner.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D556D6A91F6A08F5003108E3;
+			remoteInfo = FastlaneRunner;
+		};
 		84C6648C1E98E2A400A56CB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 14E006F21DF01A820056CBEF /* Project object */;
@@ -79,11 +86,11 @@
 		14E007431DF12FBF0056CBEF /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		7923084CE42E91CF25275DB0 /* Pods-LogSwiftForOSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSX/Pods-LogSwiftForOSX.release.xcconfig"; sourceTree = "<group>"; };
 		81B4B6402BB560BFBC8DE03F /* Pods_LogSwiftForOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogSwiftForOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8421F90721C1D01C008BCA0A /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
-		8421F90921C1D01C008BCA0A /* Fastfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastfile.swift; sourceTree = "<group>"; };
-		8421F90A21C1D01C008BCA0A /* Appfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appfile.swift; sourceTree = "<group>"; };
-		8421F90B21C1D01C008BCA0A /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		8421F90C21C1D01C008BCA0A /* Matchfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
+		84416BEF21C67DEB00831FDB /* FastlaneSwiftRunner.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FastlaneSwiftRunner.xcodeproj; path = fastlane/swift/FastlaneSwiftRunner/FastlaneSwiftRunner.xcodeproj; sourceTree = "<group>"; };
+		84416BF521C67F4500831FDB /* Appfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Appfile.swift; path = fastlane/Appfile.swift; sourceTree = "<group>"; };
+		84416BF621C67F4500831FDB /* Fastfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fastfile.swift; path = fastlane/Fastfile.swift; sourceTree = "<group>"; };
+		84416C2121C6A45A00831FDB /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = Fastfile; path = fastlane/Fastfile; sourceTree = "<group>"; };
+		84416D9B21C6AA2000831FDB /* .env.default */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.default; sourceTree = "<group>"; };
 		844A670C1DF07B6700E4E123 /* LogSwiftForOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogSwiftForOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B945EF21C1134A00D187D4 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		84C664861E98E2A400A56CB0 /* LogSwiftforiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogSwiftforiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,7 +164,11 @@
 		14E006F11DF01A820056CBEF = {
 			isa = PBXGroup;
 			children = (
-				8421F90621C1D01C008BCA0A /* fastlane */,
+				84416D9B21C6AA2000831FDB /* .env.default */,
+				84416C2121C6A45A00831FDB /* Fastfile */,
+				84416BF521C67F4500831FDB /* Appfile.swift */,
+				84416BF621C67F4500831FDB /* Fastfile.swift */,
+				84416BEF21C67DEB00831FDB /* FastlaneSwiftRunner.xcodeproj */,
 				84B945EF21C1134A00D187D4 /* Podfile */,
 				14E006FD1DF01A830056CBEF /* LogSwift */,
 				14E007081DF01A830056CBEF /* LogSwiftForOSXTests */,
@@ -240,24 +251,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8421F90621C1D01C008BCA0A /* fastlane */ = {
+		84416BF021C67DEB00831FDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8421F90721C1D01C008BCA0A /* Appfile */,
-				8421F90821C1D01C008BCA0A /* fastlane */,
-				8421F90B21C1D01C008BCA0A /* Gemfile */,
-				8421F90C21C1D01C008BCA0A /* Matchfile */,
+				84416BF421C67DEB00831FDB /* FastlaneRunner */,
 			);
-			path = fastlane;
-			sourceTree = "<group>";
-		};
-		8421F90821C1D01C008BCA0A /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				8421F90921C1D01C008BCA0A /* Fastfile.swift */,
-				8421F90A21C1D01C008BCA0A /* Appfile.swift */,
-			);
-			path = fastlane;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		84C664871E98E2A400A56CB0 /* LogSwiftforiOSTests */ = {
@@ -423,6 +422,12 @@
 			mainGroup = 14E006F11DF01A820056CBEF;
 			productRefGroup = 14E006FC1DF01A820056CBEF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 84416BF021C67DEB00831FDB /* Products */;
+					ProjectRef = 84416BEF21C67DEB00831FDB /* FastlaneSwiftRunner.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				14E006FA1DF01A820056CBEF /* LogSwiftForiOS */,
@@ -432,6 +437,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		84416BF421C67DEB00831FDB /* FastlaneRunner */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = FastlaneRunner;
+			remoteRef = 84416BF321C67DEB00831FDB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		14E006F91DF01A820056CBEF /* Resources */ = {
