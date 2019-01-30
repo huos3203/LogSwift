@@ -1,3 +1,0 @@
-[submodule "fastlane"]
-	path = fastlane
-	url = https://gitee.com/huosan/fastlane.git
