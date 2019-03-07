@@ -1,16 +1,20 @@
 PODS:
   - RNCryptor (5.0.3)
+  - SnapKit (4.0.1)
 
 DEPENDENCIES:
   - RNCryptor (~> 5.0.1)
+  - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - RNCryptor
+    - SnapKit
 
 SPEC CHECKSUMS:
   RNCryptor: c93d19029dcf7ff160aca0f24d6c9e7b0d82f664
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 1f3ff24670c940a3ff719ac5e7f38b2876c1419e
+PODFILE CHECKSUM: 0b528f7a3314853339e3bbb4f91d8bf68973f8eb
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.5.3

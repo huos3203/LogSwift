@@ -9,6 +9,7 @@ target 'LogSwiftForiOS' do
 
   # Pods for LogSwift
   pod "RNCryptor", "~> 5.0.1"
+  pod 'SnapKit', '~> 4.0.0'
   target 'LogSwiftforiOSTests' do
     inherit! :search_paths
     # Pods for testing
@@ -20,6 +21,7 @@ target 'LogSwiftForOSX' do
     use_frameworks!
     project 'LogSwift.xcodeproj'
     pod 'RNCryptor', '~> 5.0.1'
+#    pod 'SnapKit', '~> 4.0.0'
     target 'LogSwiftForOSXTests' do
         inherit! :search_paths
         # Pods for testing
