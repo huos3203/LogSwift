@@ -1,9 +1,9 @@
 PODS:
-  - RNCryptor (5.0.3)
+  - RNCryptor (5.1.0)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
-  - RNCryptor (~> 5.0.1)
+  - RNCryptor (~> 5.1.0)
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
-  RNCryptor: c93d19029dcf7ff160aca0f24d6c9e7b0d82f664
+  RNCryptor: a369134686cd2ad391323cc856b62e591193ba79
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 0b528f7a3314853339e3bbb4f91d8bf68973f8eb
+PODFILE CHECKSUM: f11a2ec6f9627eea35a3abe3c6875b77c40fb07e
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5
