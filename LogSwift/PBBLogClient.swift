@@ -16,6 +16,9 @@
 class PBBLogClient
 {
     
+    /// 日志上传
+    /// - Parameter serverUrl: 服务器
+    /// - Parameter logModel: 日志体
     func upLoadLog(to serverUrl:String = url,logData logModel:PBBLogModel)
     {
         //

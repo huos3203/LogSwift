@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LogSwiftForiOS  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="LogSwiftForiOS  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          LogSwiftForiOS 1.0.0 Docs
+        </a>
+         (0% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/huos3203/LogSwift">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fgithub%2Ecom%2Fdocsets%2FLogSwiftForiOS%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">LogSwiftForiOS Reference</a>
+      <img class="carat" src="img/carat.png" />
+      LogSwiftForiOS  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <p>依赖库及版本：</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'RNCryptor'</span><span class="p">,</span> <span class="s1">'~&gt; 5.0.1'</span>   <span class="o">/</span><span class="sr">/实现aes密钥加密
+</span></code></pre>
+<h1 id='' class='heading'>改进：</h1>
+
+<p>OC中支持枚举（日志类型，登录类型，APP类型，网路类型）</p>
+<h2 id='' class='heading'>方法介绍</h2>
+<h3 id='swift' class='heading'>第一种：工厂模式（仅支持Swift）</h3>
+
+<p>使用PBBLogAPI工厂提供单例模式上传，主要考虑日后扩展：</p>
+<pre class="highlight swift"><code>    <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="s">"http://192.168.85.92:8099/HostMonitor/client/log/addLog"</span>
+    <span class="k">let</span> <span class="nv">model</span> <span class="o">=</span> <span class="kt">PBBLogModel</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="o">.</span><span class="kt">FATAL</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="o">.</span><span class="kt">ReaderMac</span><span class="p">,</span> <span class="nv">desc</span><span class="p">:</span> <span class="s">"dddd"</span><span class="p">)</span>    <span class="err">／／</span><span class="n">日志描述</span>
+    <span class="kt">PBBLogAPI</span><span class="o">.</span><span class="n">shareInstance</span><span class="o">.</span><span class="nf">upLoadLog</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">logModel</span><span class="p">:</span> <span class="n">model</span><span class="p">)</span>             <span class="err">／／</span><span class="n">上传</span>
+</code></pre>
+<h3 id='logmodel' class='heading'>第二种：LogModel实例单行上传</h3>
+
+<p>主要是对LogModel实例赋予了上传功能：
+swift上传到指定服务器</p>
+<pre class="highlight swift"><code><span class="kt">PBBLogModel</span><span class="p">(</span><span class="o">.</span><span class="kt">INFO</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="o">.</span><span class="kt">ReaderMac</span><span class="p">,</span> <span class="nv">desc</span><span class="p">:</span> <span class="s">"申请激活+1"</span><span class="p">)</span><span class="o">.</span><span class="nf">sendTo</span><span class="p">()</span>   
+<span class="o">.</span><span class="nf">sendTo</span><span class="p">(</span><span class="nv">server</span><span class="p">:</span><span class="s">"URLString"</span><span class="p">)</span> <span class="c1">//上传到指定服务器</span>
+</code></pre>
+
+<p>objc 不支持指定服务器</p>
+<pre class="highlight objective_c"><code><span class="p">[[[</span><span class="n">PBBLogModel</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">inittWithType</span><span class="p">:</span><span class="n">LogINFO</span> <span class="nf">inApp</span><span class="p">:</span><span class="n">APPReaderMac</span> <span class="nf">desc</span><span class="p">:</span><span class="s">@"查看文件时，更新数据库中的本地路径"</span><span class="p">]</span> <span class="n">sendToServer</span><span class="p">];</span>  <span class="c1">//不支持指定服务器</span>
+</code></pre>
+<h2 id='' class='heading'>使用说明</h2>
+
+<ul>
+<li>第一步：下载程序包，拖入项目</li>
+<li>第二步：在（swift ／OC）中使用
+#### OC中使用
+导入：<code>#import &quot;PBBLogSDK.h&quot;</code><br>
+调用：
+<code>objc
+[[[PBBLogModel alloc] inittWithType:LogINFO inApp:APPReaderMac desc:@&quot;查看文件时，更新数据库中的本地路径&quot;] sendToServer]
+</code>
+&gt; 注：由于swift 枚举类型和OC枚举类型的差异，暂时有数字代替，映射到swift枚举中。</li>
+</ul>
+
+<p>映射具体实现：</p>
+<pre class="highlight swift"><code><span class="k">case</span> <span class="mi">1</span><span class="p">:</span>  <span class="n">logType</span> <span class="o">=</span> <span class="o">.</span><span class="kt">FATAL</span>  
+<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>  <span class="n">logType</span> <span class="o">=</span> <span class="o">.</span><span class="kt">ERROR</span>     
+<span class="k">case</span> <span class="mi">3</span><span class="p">:</span>  <span class="n">logType</span> <span class="o">=</span> <span class="o">.</span><span class="kt">WARN</span>       
+<span class="k">case</span> <span class="mi">4</span><span class="p">:</span>  <span class="n">logType</span> <span class="o">=</span> <span class="o">.</span><span class="kt">DEBUG</span> 
+<span class="k">default</span><span class="p">:</span> <span class="n">logType</span> <span class="o">=</span> <span class="o">.</span><span class="kt">INFO</span>
+</code></pre>
+<h4 id='swift' class='heading'>swift 使用</h4>
+
+<p>导入：</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">PBBLogSDK</span>
+</code></pre>
+
+<p>调用：</p>
+<pre class="highlight swift"><code><span class="kt">PBBLogModel</span><span class="p">(</span><span class="o">.</span><span class="kt">INFO</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="o">.</span><span class="kt">ReaderMac</span><span class="p">,</span> <span class="nv">desc</span><span class="p">:</span> <span class="s">"申请激活+1"</span><span class="p">)</span><span class="o">.</span><span class="nf">sendTo</span><span class="p">()</span>
+</code></pre>
+
+<p>IOS支持：安装需要步骤：
+<img src="912258FD-8ECB-42AB-AE21-B06A147462F3.png" alt=""></p>
+
+<p>单元测试效果，上传到服务器的数据如下：</p>
+<pre class="highlight json"><code><span class="w">    </span><span class="err">xctest</span><span class="p">[</span><span class="mi">55959</span><span class="p">:</span><span class="mi">896729</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"application_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Reader for OS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"device_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"huoshug.local"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"extension1"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mac token"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"file_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"PBBLogSDKTests.swift"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"imei"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"9CD72BC0-6A49-516F-AC8C-C0D10796535A"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"level"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"INFO"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mac"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"extension3"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mac user"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"content"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"11</span><span class="se">\/</span><span class="s2">28</span><span class="se">\/</span><span class="s2">2016 12:18:22:002 xctest[55959:?] </span><span class="se">\/</span><span class="s2">Users</span><span class="se">\/</span><span class="s2">pengyucheng</span><span class="se">\/</span><span class="s2">git-svn</span><span class="se">\/</span><span class="s2">PBBReader</span><span class="se">\/</span><span class="s2">PBBLogSDKTests</span><span class="se">\/</span><span class="s2">PBBLogSDKTests.swift(49) testMyMethod():</span><span class="se">\r\查</span><span class="s2">看文件时，更新数据库中的本地路径</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"desc"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"dddd"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"op_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Version 10.12.1 (Build 16B2555)"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"equip_serial"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"C07L41M6DWYM"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"equip_host"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"account_password"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"AwEjXApASgaC2Oo0sGPvIxcJevU2qO5MiIGP4PMmL00y7t0AZ5zl4uapZ9BtdfKc8bPTXQfANgkg1XpyuD6SpPCaIKGV3VfNcNkEht1WVtR0BQ=="</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lines"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">49</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"login_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mac"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"method_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"testMyMethod()"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"extension2"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"account_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sdk_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"10.12.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"equip_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Macmini6,2"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h2 id='rncryptor' class='heading'>进阶RNCryptor加密算法</h2>
+<h3 id='' class='heading'>如何加密/解密字符串？</h3>
+
+<p>AES加密字节。它不加密的字符，字母，文字，图片，视频，cats或ennui。它仅加密byte类型。您需要将其他的东西（如字符串）和bytes类型通过同一种方式相互转换。有几种方法可以做到。一些最受欢迎的是UTF-8编码，Base-64编码，和十六进制编码。还有许多其他的选择。请不要让RNCryptor来推测你使用的编码格式，它不会这么做的。它接受NSData类型并返回bytes类型。<br>
+String和utf8编码的NSData互转：</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="s">"sdfhskhfsj"</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span>    <span class="c1">// OC: dataUsingEncoding()</span>
+<span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="kt">String</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span>
+</code></pre>
+
+<p>String和Base-64编码的NSData互转：</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="kt">NSData</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">base64Encoded</span><span class="p">:</span><span class="s">"sdfhskhfsj"</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="o">.</span><span class="n">ignoreUnknownCharacters</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="nf">base64EncodedData</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="o">.</span><span class="n">endLineWithCarriageReturn</span><span class="p">)</span>
+</code></pre>
+<h3 id='key-based-encryption' class='heading'>基于密钥的加密 key-based encryption</h3>
+
+<p>您需要一个小的专业知识正确使用基于密钥的加密，并且它是非常容易导致不安全的系统，看起来安全。最重要的规则是，密钥必须是随机的，在所有他们的字节。如果你不熟悉基本概念如AES-CBC加密，IV，和HMAC，你应该避免使用基于密钥的加密。</p>
+
+<p>使用基于密钥的加密，这是一个特定的长度的随机byte序列。RNCryptor V3格式使用256位（32字节）进行加密和认证密钥。</p>
+
+<p>密码不是一个特定长度的“随机字节序列”，它们不是随机的，它们可以是各种各样的长度，很少精确的32。RNCryptor定义一个特定的和安全的方法用于将密码转换到钥匙中，这是它的一个主要特征。 </p>
+
+<p>有时会直接用随机密钥来工作。把一个密码转换成一个密钥是故意慢（几十毫秒）。密码加密的消息也是一个16byte字节的时间要比密钥加密的消息更久一点。如果你的系统对许多短的消息进行加密和解密的额操作，这无疑会对系统的性能造成非常大的影响，特别是在服务器上。</p>
+
+<p>RNCryptor支持基于密钥加密和解密直接操作，多个密钥的size 和数量可能会改变他们之间的格式版本，所以基于密钥加密是特定的版本加密方式。</p>
+
+<p>为了确保是安全的，密钥必须是一个随机的byte序列。参照<a href="https://github.com/RNCryptor/RNCryptor#converting-a-password-to-a-key">Converting a Password to a Key</a>帮助当你只有一个密码时，如何创建byte随机序列。</p>
+<h2 id='best-practice-security' class='heading'>Best practice security</h2>
+
+<p>Wherever possible within the above constraints, the best available algorithms are applied. This means AES-256, HMAC+SHA256, and PBKDF2. (Note that several of these decisions were reasonable for v3, but may change for v4.)</p>
+<h3 id='aes-256' class='heading'>AES-256.</h3>
+
+<p>While Bruce Schneier has made some interesting recommendations regarding moving to AES-128 due to certain attacks on AES-256, my current thinking is in line with <a href="http://www.daemonology.net/blog/2009-07-31-thoughts-on-AES.html">Colin Percival</a>. PBKDF2 output is effectively random, which should negate related-keys attacks against the kinds of use cases we&rsquo;re interested in.</p>
+<h3 id='aes-cbc-mode' class='heading'>AES-CBC mode.</h3>
+
+<p>This was a somewhat complex decision, but the ubiquity of CBC outweighs other considerations here. There are no major problems with CBC mode, and nonce-based modes like CTR have other trade-offs. See <q>[Mode changes for RNCryptor](http://robnapier.net/mode-rncryptor)</q> for more details on this decision.</p>
+<h3 id='encrypt-then-mac' class='heading'>Encrypt-then-MAC.</h3>
+
+<p>If there were a good authenticated AES mode on iOS (GCM for instance), I would probably use that for its simplicity. Colin Percival makes <a href="http://www.daemonology.net/blog/2009-06-24-encrypt-then-mac.html">good arguments for hand-coding an encrypt-then-MAC</a> rather than using an authenticated AES mode, but in RNCryptor mananging the HMAC actually adds quite a bit of complexity. I&rsquo;d rather the complexity at a more broadly peer-reviewed layer like CommonCryptor than at the RNCryptor layer. But this isn&rsquo;t an option, so I fall back to my own Encrypt-than-MAC.</p>
+<h3 id='hmac-sha256' class='heading'>HMAC+SHA256.</h3>
+
+<p>No surprises here.</p>
+<h3 id='pbkdf2' class='heading'>PBKDF2.</h3>
+
+<p>While bcrypt and scrypt may be more secure than PBKDF2, CommonCryptor only supports PBKDF2. <a href="http://security.stackexchange.com/questions/4781/do-any-security-experts-recommend-bcrypt-for-password-storage">NIST also continues to recommend PBKDF2</a>. We use 10k rounds of PBKDF2 which represents about 80ms on an iPhone 4.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="http://huos3203.github.io" target="_blank" rel="external">日志工具</a>. All rights reserved. (Last updated: 2019-09-02)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

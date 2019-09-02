@@ -18,13 +18,15 @@
 
 public let url = "http://114.112.104.138:6001/HostMonitor/client/log/addLog"
 //let url = "http://192.168.85.92:8099/HostMonitor/client/log/addLog"
+
 @objc(PBBLogAPI)
+/// 接口类
 public class PBBLogAPI: NSObject
 {
-    //创建一个属于自己类型的计算类型的类变量
+    /// 创建一个属于自己类型的计算类型的类变量
     public class var shareInstance:PBBLogAPI
     {
-        //嵌套一个 Singleton 结构体
+        /// 嵌套一个 Singleton 结构体
         struct Singleton{
             //定义一个存储类型的类常量，
             static let instance = PBBLogAPI()
@@ -39,6 +41,9 @@ public class PBBLogAPI: NSObject
         
     }
     
+    /// 上传日志
+    /// - Parameter neweUrl: 服务器路径
+    /// - Parameter logModel: 实体
     public func upLoadLog(to neweUrl:String = url,logModel:PBBLogModel)
     {
         //

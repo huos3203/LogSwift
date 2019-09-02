@@ -1,0 +1,8 @@
+author: 日志工具OS X
+author_url: http://huos3203.github.io
+github_url: https://github.com/huos3203/LogSwift
+root_url: https://github.com/huos3203
+module: LogSwiftForOSX
+output: docs/OSX
+theme: fullwidth
+xcodebuild_arguments: [-workspace, '../../hexo.xcworkspace', -scheme, 'LogSwiftForOSX']
