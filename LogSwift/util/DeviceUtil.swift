@@ -238,7 +238,7 @@ class DeviceUtil: NSObject
                                                   IOServiceMatching("IOPlatformExpertDevice"));
             
             let model:Unmanaged<CFTypeRef>! = IORegistryEntryCreateCFProperty(service,
-                                                                              "model" as CFString!,
+                                                                              "model" as CFString?,
                                                                               kCFAllocatorDefault,
                                                                               0)
             /*

@@ -8,6 +8,4 @@ theme: fullwidth
 min_acl: internal
 sdk: iphone
 module_version: 1.0.0
-podspec: LogSwift.podspec
-include: LogSwift/**/*.{swift,h}
-xcodebuild_arguments: [-workspace, '../../hexo.xcworkspace', -scheme, 'LogSwiftForiOS']
+xcodebuild_arguments: [-workspace,'../../hexo.xcworkspace', -scheme, 'LogSwiftForiOS',USE_SWIFT_RESPONSE_FILE=NO]

@@ -1,6 +1,796 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/PBBLogAPI.swift",
+      "line": 19,
+      "symbol": "url",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/PBBLogAPI.swift",
+      "line": 24,
+      "symbol": "PBBLogAPI",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/PBBLogAPI.swift",
+      "line": 38,
+      "symbol": "PBBLogAPI.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/PBBLogClient.swift",
+      "line": 16,
+      "symbol": "PBBLogClient",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/PBBLogClient.swift",
+      "line": 44,
+      "symbol": "PBBLogClient.upLoadLogg(to:logData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 20,
+      "symbol": "PBBLogModel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 22,
+      "symbol": "PBBLogModel.level",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 23,
+      "symbol": "PBBLogModel.file_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 24,
+      "symbol": "PBBLogModel.method_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 25,
+      "symbol": "PBBLogModel.lines",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 26,
+      "symbol": "PBBLogModel.content",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 27,
+      "symbol": "PBBLogModel.desc",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 28,
+      "symbol": "PBBLogModel.extension1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 29,
+      "symbol": "PBBLogModel.extension2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 30,
+      "symbol": "PBBLogModel.extension3",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 32,
+      "symbol": "PBBLogModel.sdk_version",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 33,
+      "symbol": "PBBLogModel.system",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 34,
+      "symbol": "PBBLogModel.imei",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 35,
+      "symbol": "PBBLogModel.username",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 36,
+      "symbol": "PBBLogModel.token",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 38,
+      "symbol": "PBBLogModel.login_type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 39,
+      "symbol": "PBBLogModel.application_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 40,
+      "symbol": "PBBLogModel.account_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 41,
+      "symbol": "PBBLogModel.account_password",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 42,
+      "symbol": "PBBLogModel.network_type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 44,
+      "symbol": "PBBLogModel.op_version",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 45,
+      "symbol": "PBBLogModel.equip_serial",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 46,
+      "symbol": "PBBLogModel.equip_host",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 47,
+      "symbol": "PBBLogModel.equip_model",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 48,
+      "symbol": "PBBLogModel.device_info",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 54,
+      "symbol": "PBBLogModel.cpu_abi",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 57,
+      "symbol": "PBBLogModel.hardware_info",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 160,
+      "symbol": "PBBLogModel.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PBBLogModel.swift",
+      "line": 182,
+      "symbol": "PBBLogModel.toData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 16,
+      "symbol": "LogType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 18,
+      "symbol": "LogType.FATAL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 19,
+      "symbol": "LogType.ERROR",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 20,
+      "symbol": "LogType.WARN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 21,
+      "symbol": "LogType.INFO",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 22,
+      "symbol": "LogType.DEBUG",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 26,
+      "symbol": "Log",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 28,
+      "symbol": "Log.FATAL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 29,
+      "symbol": "Log.ERROR",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 30,
+      "symbol": "Log.WARN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 31,
+      "symbol": "Log.INFO",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 32,
+      "symbol": "Log.DEBUG",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 35,
+      "symbol": "APPName",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 37,
+      "symbol": "APPName.Reader",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 38,
+      "symbol": "APPName.PBBMaker",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 39,
+      "symbol": "APPName.ReaderMac",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 40,
+      "symbol": "APPName.SuiZhi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 44,
+      "symbol": "APP",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 46,
+      "symbol": "APP.Reader",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 47,
+      "symbol": "APP.PBBMaker",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 48,
+      "symbol": "APP.ReaderMac",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 49,
+      "symbol": "APP.SuiZhi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 52,
+      "symbol": "LoginType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 55,
+      "symbol": "LoginType.Account",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 56,
+      "symbol": "LoginType.WeiXin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 57,
+      "symbol": "LoginType.QQ",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 58,
+      "symbol": "LoginType.VerificationCode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 59,
+      "symbol": "LoginType.UnLogin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 62,
+      "symbol": "Login",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 65,
+      "symbol": "Login.Account",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 66,
+      "symbol": "Login.WeiXin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 67,
+      "symbol": "Login.QQ",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 68,
+      "symbol": "Login.VerificationCode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 69,
+      "symbol": "Login.UnLogin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 72,
+      "symbol": "SystemType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 74,
+      "symbol": "SystemType.iOS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 75,
+      "symbol": "SystemType.Mac",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 76,
+      "symbol": "SystemType.Android",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 77,
+      "symbol": "SystemType.Windows",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 81,
+      "symbol": "NetworkType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 84,
+      "symbol": "NetworkType.Unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 85,
+      "symbol": "NetworkType.None",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 86,
+      "symbol": "NetworkType.G3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 87,
+      "symbol": "NetworkType.G4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 88,
+      "symbol": "NetworkType.Wifi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 92,
+      "symbol": "Network",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 95,
+      "symbol": "Network.Unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 96,
+      "symbol": "Network.None",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 97,
+      "symbol": "Network.G3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 98,
+      "symbol": "Network.G4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/model/PbbEnum.swift",
+      "line": 99,
+      "symbol": "Network.Wifi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/ConvertToDictionary.swift",
+      "line": 27,
+      "symbol": "NSObject.convertToDictionary()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/ConvertToDictionary.swift",
+      "line": 97,
+      "symbol": "NSObject.requestBody()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 24,
+      "symbol": "DeviceUtil",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 27,
+      "symbol": "DeviceUtil.system",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 28,
+      "symbol": "DeviceUtil.op_version",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 29,
+      "symbol": "DeviceUtil.processName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 30,
+      "symbol": "DeviceUtil.threadId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 31,
+      "symbol": "DeviceUtil.processIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 32,
+      "symbol": "DeviceUtil.hostName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 33,
+      "symbol": "DeviceUtil.executionTime",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 35,
+      "symbol": "DeviceUtil.serial_number",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 36,
+      "symbol": "DeviceUtil.equip_host",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 37,
+      "symbol": "DeviceUtil.machine_model",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 38,
+      "symbol": "DeviceUtil.device_info",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 39,
+      "symbol": "DeviceUtil.platform_UUID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 41,
+      "symbol": "DeviceUtil.iterator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 43,
+      "symbol": "DeviceUtil.cpu_type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 44,
+      "symbol": "DeviceUtil.physical_memory",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 47,
+      "symbol": "DeviceUtil.username",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 48,
+      "symbol": "DeviceUtil.account_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 49,
+      "symbol": "DeviceUtil.account_password",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 50,
+      "symbol": "DeviceUtil.network_type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 51,
+      "symbol": "DeviceUtil.token",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 52,
+      "symbol": "DeviceUtil.login_type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 54,
+      "symbol": "DeviceUtil.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 65,
+      "symbol": "DeviceUtil.bySystem_profiler()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 116,
+      "symbol": "DeviceUtil.parpserIterator(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift/LogSwift/util/DeviceUtil.swift",
+      "line": 172,
+      "symbol": "DeviceUtil.byProcessInfo()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/admin/hsg/hexo/GitSubmodules/LogSwift"
 }
