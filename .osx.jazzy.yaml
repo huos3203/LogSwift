@@ -1,7 +1,7 @@
 author: 日志工具OSX
-author_url: http://huos3203.github.io
-github_url: https://github.com/huos3203/LogSwift
-root_url: https://github.com/huos3203/LogSwift
+author_url: http://it-boyer.github.io
+github_url: https://github.com/it-boyer/LogSwift
+root_url: https://github.com/it-boyer/LogSwift
 module: LogSwiftForOSX
 output: docs/OSX
 theme: fullwidth
