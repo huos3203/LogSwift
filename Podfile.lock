@@ -1,20 +1,27 @@
 PODS:
+  - LogSwift (1.8):
+    - RNCryptor (~> 5.1.0)
+    - SnapKit (~> 4.0.0)
   - RNCryptor (5.1.0)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
-  - RNCryptor (~> 5.1.0)
-  - SnapKit (~> 4.0.0)
+  - LogSwift (from `./`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - RNCryptor
     - SnapKit
 
+EXTERNAL SOURCES:
+  LogSwift:
+    :path: "./"
+
 SPEC CHECKSUMS:
+  LogSwift: ce3e2351c976fe8a382998aa45f6d711d45f73ef
   RNCryptor: a369134686cd2ad391323cc856b62e591193ba79
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: f11a2ec6f9627eea35a3abe3c6875b77c40fb07e
+PODFILE CHECKSUM: 91720698fe96ad987b9f5d4aabe4ec6fcb099bdb
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1
