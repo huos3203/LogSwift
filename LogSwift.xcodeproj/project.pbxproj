@@ -535,7 +535,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RNCryptor-macOS/RNCryptor.framework",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor-macOS13/RNCryptor.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
