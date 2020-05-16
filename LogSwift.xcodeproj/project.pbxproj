@@ -59,10 +59,8 @@
 		14E007341DF01E940056CBEF /* PBBLogClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBLogClient.swift; sourceTree = "<group>"; };
 		14E007361DF01E940056CBEF /* ConvertToDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertToDictionary.swift; sourceTree = "<group>"; };
 		14E007371DF01E940056CBEF /* DeviceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceUtil.swift; sourceTree = "<group>"; };
-		14E007431DF12FBF0056CBEF /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = readme.md; path = LogSwift/readme.md; sourceTree = "<group>"; };
 		1C3DE71F342CD05989732E0A /* Pods-LogSwiftForOSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		580B12C9E6226DA7D5BC6B60 /* Pods-LogSwiftForOSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogSwiftForOSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogSwiftForOSXTests/Pods-LogSwiftForOSXTests.release.xcconfig"; sourceTree = "<group>"; };
-		84416D9B21C6AA2000831FDB /* .env.default */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.default; sourceTree = "<group>"; };
 		844A670C1DF07B6700E4E123 /* LogSwiftForOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogSwiftForOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B945EF21C1134A00D187D4 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		84C664861E98E2A400A56CB0 /* LogSwiftforiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogSwiftforiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +135,6 @@
 			children = (
 				84DA90CB231D457600E8F59E /* .iOS.jazzy.yaml */,
 				84DA90CA231D35E900E8F59E /* .osx.jazzy.yaml */,
-				84416D9B21C6AA2000831FDB /* .env.default */,
-				14E007431DF12FBF0056CBEF /* readme.md */,
 				144746581E9CB02A00FC0F29 /* readme.md */,
 				F925864A246FD5E20031EC3E /* LogSwift.podspec */,
 				84B945EF21C1134A00D187D4 /* Podfile */,
